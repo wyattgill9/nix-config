@@ -9,13 +9,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    awww.url = "git+https://codeberg.org/LGFae/awww";
+
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    spicetify-nix.url = "github:Gerg-L/spicetify-nix/24.11";
-    vicinae.url = "github:vicinaehq/vicinae";
   };
 
   outputs =
@@ -23,19 +22,16 @@
       self,
       nixpkgs,
       home-manager,
-      spicetify-nix,
-      vicinae,
       ...
     }@inputs:
     let
-      util = import ./util.nix {
-        defaultSystems = [
-          "x86_64-linux"
-          "aarch64-darwin"
-        ];
-      };
+      # util = import ./util.nix {
+      #   defaultSystems = [
+      #     "x86_64-linux"
+      #     "aarch64-darwin"
+      #   ];
+      # };
     in
-    (
       {
         nixosConfigurations.zen = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
@@ -51,8 +47,6 @@
           };
           modules = [
             ./hosts/zen/home.nix
-            spicetify-nix.homeManagerModules.spicetify
-            vicinae.homeManagerModules.spicetify
           ];
         };
 
@@ -66,21 +60,5 @@
             ./hosts/macos/home.nix
           ];
         };
-      }
-      // util.eachDefaultSystem (
-        system:
-        let
-          pkgs = nixpkgs.legacyPackages.${system};
-        in
-        {
-          devShells = {
-            cpp = import ./devshells/cpp.nix { inherit pkgs; };
-            rust = import ./devshells/rust.nix { inherit pkgs; };
-            haskell = import ./devshells/haskell.nix { inherit pkgs; };
-            python = import ./devshells/python.nix { inherit pkgs; };
-            scheme = import ./devshells/scheme.nix { inherit pkgs; };
-          };
-        }
-      )
-    );
+      };
 }

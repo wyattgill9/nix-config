@@ -8,8 +8,7 @@ read -p "Remove all old generations (yes/no): " confirm
 if [ -f /etc/NIXOS ]; then
     sudo nix-env --delete-generations old --profile /nix/var/nix/profiles/system
 else
-    command -v darwin-rebuild &> /dev/null && \
-        sudo nix-env --delete-generations old --profile /nix/var/nix/profiles/system
+    sudo nix-env --delete-generations old --profile /nix/var/nix/profiles/system
 fi
 nix-env --delete-generations old
 [ -d "$HOME/.local/state/nix/profiles" ] && \

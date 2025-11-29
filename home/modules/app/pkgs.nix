@@ -4,5 +4,7 @@
     google-chrome
     zoom-us
     xfce.thunar
+    spotify
+    networkmanagerapplet
   ];
 }

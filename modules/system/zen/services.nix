@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-  services = {
+  services = {   
     openssh = {
       enable = true;
 
@@ -23,6 +23,20 @@
         wayland.enable = true;
       };
     };
+
+    keyd = {
+      enable = true;
+
+      keyboards.default = {
+        ids = [ "*" ];
+        settings = {
+          main = {
+            capslock = "esc";
+          };
+        };
+      };
+    };
+
   };
 
   environment.systemPackages = with pkgs; [

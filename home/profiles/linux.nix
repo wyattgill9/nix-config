@@ -1,8 +1,8 @@
 { ... }:
 {
   imports = [
-    ./modules/terminal
-    ./modules/apps
-    ./modules/wm
+    ../modules/terminal
+    ../modules/app
+    ../modules/wm
   ];
 }

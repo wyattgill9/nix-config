@@ -32,13 +32,15 @@
 
       exec-once = wl-paste --type text --watch cliphist store
       exec-once = wl-paste --type image --watch cliphist store
+
+      exec-once = awww-daemon
+          
       exec-once = waybar
-      exec-once = hyprpaper
       exec-once = hyprsunset
 
       exec-once = hyprctl setcursor Adwaita 24
 
-      exec-once = systemctl --user start hyprpolkitagent
+      # exec-once = systemctl --user start hyprpolkitagent
 
       #Pinyin 
       exec-once = fcitx5 -d
@@ -67,8 +69,7 @@
 
       $mainMod = SUPER
 
-      bind = $mainMod SHIFT, Z, exec, rofi -show drun -theme ~/.config/rofi/config.rasi
-
+      bind = $mainMod SHIFT, Z, exec, rofi -show drun -theme ~/.config/rofi/config.rasi     
 
       bind = $mainMod, Q, exec, $terminal
       bind = $mainMod, C, killactive,

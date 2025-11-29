@@ -46,6 +46,7 @@ in
 
       shellAliases = {
         cd = "z";
+        cdi= "zi";
         c = "clear";
         cat = "bat";
         ls = "lsd";

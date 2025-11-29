@@ -9,6 +9,7 @@
       };
       ui = {
         default-command = "log";
+        paginate = "never";
       };
     };
   };

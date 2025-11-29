@@ -28,7 +28,7 @@
     dunst
     libnotify
     wl-clipboard
-    mplayer
+    # mplayer
     adwaita-icon-theme
   ];
 }

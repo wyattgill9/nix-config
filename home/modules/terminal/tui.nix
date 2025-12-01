@@ -19,5 +19,7 @@
     };
   };
 
-  home.packages = [];
+  home.packages = [
+    pkgs.cava
+  ];
 }

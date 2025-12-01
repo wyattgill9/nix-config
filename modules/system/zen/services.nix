@@ -2,7 +2,6 @@
   services = {
     openssh = {
       enable = true;
-
       settings = {
         PasswordAuthentication = true;
         AllowUsers = ["wyattgill"];

@@ -1,5 +1,4 @@
-{ ... }:
-{
+{...}: {
   programs.hyprlock = {
     enable = true;
     extraConfig = "

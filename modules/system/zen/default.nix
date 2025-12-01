@@ -1,5 +1,4 @@
-{ ... }:
-{
+{...}: {
   imports = [
     ./hardware.nix
     ./bootloader.nix
@@ -10,6 +9,7 @@
     ./locale.nix
     ./pipewire.nix
     ./steam.nix
+    ./flatpak.nix
     ./pkgs.nix
   ];
 }

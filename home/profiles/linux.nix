@@ -1,5 +1,4 @@
-{ ... }:
-{
+{...}: {
   imports = [
     ../modules/terminal
     ../modules/app

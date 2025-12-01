@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   services.pulseaudio.enable = false;
 
   services.pipewire = {
@@ -10,5 +9,5 @@
   };
 
   hardware.alsa.enablePersistence = true;
-  environment.systemPackages = with pkgs; [ pulseaudioFull ];
+  environment.systemPackages = with pkgs; [pulseaudioFull];
 }

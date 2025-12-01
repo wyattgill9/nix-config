@@ -1,6 +1,10 @@
-{ pkgs, inputs, ... }:
 {
+  system,
+  pkgs,
+  inputs,
+  ...
+}: {
   home.packages = [
-    inputs.awww.packages.${pkgs.system}.awww
+    inputs.awww.packages.${system}.awww
   ];
 }

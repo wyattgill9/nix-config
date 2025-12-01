@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   networking = {
     hostName = "zen";
     useNetworkd = false;

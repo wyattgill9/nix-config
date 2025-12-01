@@ -1,9 +1,8 @@
 {
   pkgs,
-  inputs ? { },
+  inputs ? {},
   ...
-}:
-{
+}: {
   imports = [
     ./hardware.nix
     ../../modules/system/zen

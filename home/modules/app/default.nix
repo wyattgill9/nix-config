@@ -1,7 +1,6 @@
-{ ... }:
-{
+{...}: {
   imports = [
-    ./discord.nix
+    ./nixcord.nix
     ./zen.nix
     ./minecraft.nix
     ./anki.nix

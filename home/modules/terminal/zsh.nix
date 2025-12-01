@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-let
+{pkgs, ...}: let
   # Direnv forces download & build of fish shell to test, just skip it
   direnv-no-fish = pkgs.direnv.overrideAttrs (old: {
     nativeCheckInputs = with pkgs; [
@@ -21,8 +20,7 @@ let
     "scheme"
     "python"
   ];
-in
-{
+in {
   programs = {
     zsh = {
       enable = true;
@@ -44,20 +42,22 @@ in
         source <(jj util completion zsh)
       '';
 
-      shellAliases = {
-        cd = "z";
-        cdi= "zi";
-        c = "clear";
-        cat = "bat";
-        ls = "lsd";
-        cmk = "cmake -S . -B build -G Ninja && cmake --build build";
-      }
-      // builtins.listToAttrs (
-        map (lang: {
-          name = "${lang}-dev";
-          value = "nix develop ~/nx#${lang} -c zsh";
-        }) langs
-      );
+      shellAliases =
+        {
+          cd = "z";
+          cdi = "zi";
+          c = "clear";
+          cat = "bat";
+          ls = "lsd";
+          cmk = "cmake -S . -B build -G Ninja && cmake --build build";
+        }
+        // builtins.listToAttrs (
+          map (lang: {
+            name = "${lang}-dev";
+            value = "nix develop ~/nx#${lang} -c zsh";
+          })
+          langs
+        );
     };
 
     direnv = {

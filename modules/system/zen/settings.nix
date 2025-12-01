@@ -1,5 +1,4 @@
-{ ... }:
-{
+{...}: {
   nix.settings = {
     auto-optimise-store = true;
     trusted-substituters = [

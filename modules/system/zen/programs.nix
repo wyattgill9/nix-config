@@ -1,12 +1,13 @@
-{
-  pkgs,
-  inputs,
-  ...
-}:
-{
+{...}: {
   programs = {
     zsh.enable = true;
+
     nix-ld.enable = true;
+
+    nix-index = {
+      enable = true;
+      enableZshIntegration = true;
+    };
 
     # APPIMAGES
     appimage = {

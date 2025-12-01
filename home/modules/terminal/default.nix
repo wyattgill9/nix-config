@@ -1,5 +1,4 @@
-{ ... }:
-{
+{...}: {
   imports = [
     ./ghostty
     ./helix
@@ -11,7 +10,7 @@
 
     ./starship.nix
     ./zoxide.nix
-    ./btop.nix
+    ./tui.nix
 
     ./foot.nix
     ./misc.nix

@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   home.file.".config/ghostty/shaders" = {
     source = ./shaders;
     recursive = true;
@@ -7,7 +6,10 @@
 
   programs.ghostty = {
     enable = true;
-    package = if pkgs.stdenv.isLinux then pkgs.ghostty else null;
+    package =
+      if pkgs.stdenv.isLinux
+      then pkgs.ghostty
+      else null;
 
     enableZshIntegration = true;
     installBatSyntax = pkgs.stdenv.isLinux;

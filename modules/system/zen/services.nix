@@ -1,34 +1,30 @@
-{ pkgs, ... }:
-{
-  services = {   
+{pkgs, ...}: {
+  services = {
     openssh = {
       enable = true;
 
       settings = {
         PasswordAuthentication = true;
-        AllowUsers = [ "wyattgill" ];
+        AllowUsers = ["wyattgill"];
       };
     };
 
     printing.enable = true;
 
-    flatpak.enable = true;
     dbus.enable = true;
 
     blueman.enable = true;
 
-    displayManager = {
-      sddm = {
-        enable = true;
-        wayland.enable = true;
-      };
+    displayManager.ly = {
+      enable = true;
     };
 
+    # Caps Lock -> Esc
     keyd = {
       enable = true;
 
       keyboards.default = {
-        ids = [ "*" ];
+        ids = ["*"];
         settings = {
           main = {
             capslock = "esc";
@@ -36,7 +32,6 @@
         };
       };
     };
-
   };
 
   environment.systemPackages = with pkgs; [

@@ -7,7 +7,6 @@
         "$hostname"
         "$directory"
         "$git_branch"
-        "$git_status"
         "$line_break"
         "$time"
         "$character"
@@ -38,19 +37,6 @@
         format = "|[$symbol$branch]($style) ";
         symbol = " ";
         style = "bold purple";
-      };
-      git_status = {
-        format = "([\\[$all_status$ahead_behind\\]]($style) )";
-        style = "bold red";
-        conflicted = "🏳";
-        ahead = "⇡\${count}";
-        behind = "⇣\${count}";
-        diverged = "⇕⇡\${ahead_count}⇣\${behind_count}";
-        untracked = "?\${count}";
-        modified = "!\${count}";
-        staged = "+\${count}";
-        renamed = "»\${count}";
-        deleted = "✘\${count}";
       };
       time = {
         format = "\\[ $time \\] ";

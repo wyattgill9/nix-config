@@ -9,6 +9,7 @@
   home.packages = with pkgs; [
     nixd # Nix LSP
 
+    neovim
     sd
     ripgrep
     fzf

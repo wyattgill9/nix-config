@@ -25,6 +25,7 @@ in {
     zsh = {
       enable = true;
       autosuggestion.enable = true;
+      # zprof.enable = true;
 
       initContent = ''
         if [ "$(uname)" = "Darwin" ]; then
@@ -36,8 +37,13 @@ in {
         eval "$(starship init zsh)"
         eval "$(zoxide init zsh)"
 
-        autoload -U compinit
-        compinit
+        autoload -Uz compinit
+        typeset -i updated_at=$(date +'%j' -r ~/.zcompdump 2>/dev/null || stat -f '%Sm' -t '%j' ~/.zcompdump 2>/dev/null)
+        if [ $(date +'%j') != $updated_at ]; then
+          compinit -i
+        else
+          compinit -C -i
+        fi
 
         source <(jj util completion zsh)
       '';
@@ -50,6 +56,7 @@ in {
           cat = "bat";
           ls = "lsd";
           cmk = "cmake -S . -B build -G Ninja && cmake --build build";
+          vim = "nvim";
         }
         // builtins.listToAttrs (
           map (lang: {

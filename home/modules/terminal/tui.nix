@@ -20,6 +20,6 @@
   };
 
   home.packages = [
-    pkgs.cava
+    # pkgs.cava
   ];
 }

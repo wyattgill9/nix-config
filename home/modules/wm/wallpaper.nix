@@ -1,10 +1,9 @@
 {
-  system,
   pkgs,
   inputs,
   ...
 }: {
   home.packages = [
-    inputs.awww.packages.${system}.awww
+    inputs.awww.packages.${pkgs.stdenv.hostPlatform.system}.awww
   ];
 }

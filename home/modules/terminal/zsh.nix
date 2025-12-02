@@ -72,6 +72,7 @@ in {
       package = direnv-no-fish;
       enableZshIntegration = true;
       nix-direnv.enable = true;
+      silent = true;
     };
   };
 }

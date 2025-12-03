@@ -12,14 +12,6 @@
       runHook postCheck
     '';
   });
-
-  langs = [
-    "cpp"
-    "rust"
-    "haskell"
-    "scheme"
-    "python"
-  ];
 in {
   programs = {
     zsh = {
@@ -57,14 +49,7 @@ in {
           ls = "lsd";
           cmk = "cmake -S . -B build -G Ninja && cmake --build build";
           vim = "nvim";
-        }
-        // builtins.listToAttrs (
-          map (lang: {
-            name = "${lang}-dev";
-            value = "nix develop ~/nx#${lang} -c zsh";
-          })
-          langs
-        );
+        };
     };
 
     direnv = {
@@ -72,7 +57,7 @@ in {
       package = direnv-no-fish;
       enableZshIntegration = true;
       nix-direnv.enable = true;
-      silent = true;
+      # silent = true;
     };
   };
 }

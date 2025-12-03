@@ -13,7 +13,15 @@
     };
   };
 
-  programs.git.enable = true;
+  programs.git = {
+    enable = true;
+    settings = {
+      user = {
+        name = "Wyatt Gill";
+        email= "wyattgill01@outlook.com";
+      };
+    };
+  };
 
   home.packages = with pkgs; [
     lazyjj

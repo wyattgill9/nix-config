@@ -28,12 +28,20 @@
 
     firewall = {
       enable = true;
+
       allowedTCPPorts = [22]; # SSH
-      # allowedUDPPorts = [ ];
+      allowedUDPPortRanges = [
+        { from = 60000; to = 61000; } # Mosh
+      ];
     };
   };
 
+  services.tailscale = {
+    enable = true;
+  };
+    
   environment.systemPackages = with pkgs; [
+    mosh
     networkmanagerapplet
     ethtool
     bind

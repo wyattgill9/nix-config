@@ -1,4 +1,4 @@
-{...}: {
+{pkgs, ...}: {
   nix.settings = {
     auto-optimise-store = true;
     trusted-substituters = [
@@ -17,4 +17,8 @@
       "flakes"
     ];
   };
+
+  environment.defaultPackages = with pkgs; [
+    cachix
+  ];
 }

@@ -8,7 +8,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     awww = {
-      url = "git+https://codeberg.org/LGFae/awww";     
+      url = "git+https://codeberg.org/LGFae/awww";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.flake-compat.follows = "";
     };
@@ -26,25 +26,15 @@
   };
 
   outputs = {
-    self,
     nixpkgs,
     home-manager,
     ...
   } @ inputs: let
     systems = ["x86_64-linux" "aarch64-darwin"];
-    forAllSystems = nixpkgs.lib.genAttrs systems;
-
-    mkHome = system: modules:
-      home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.${system};
-        extraSpecialArgs = {inherit inputs system;};
-        inherit modules;
-      };
+    forAllSystems = fn: nixpkgs.lib.genAttrs systems (system: fn nixpkgs.legacyPackages.${system});
   in {
     formatter = forAllSystems (
-      system: let
-        pkgs = nixpkgs.legacyPackages.${system};
-      in
+      pkgs:
         pkgs.treefmt.withConfig {
           runtimeInputs = [pkgs.alejandra];
           settings = {
@@ -57,6 +47,12 @@
         }
     );
 
+    devShells = forAllSystems (pkgs: {
+      default = pkgs.mkShellNoCC {
+        packages = [pkgs.nixd];
+      };
+    });
+
     nixosConfigurations.zen = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs;};
       modules = [
@@ -66,13 +62,19 @@
     };
 
     homeConfigurations = {
-      "wyattgill@zen" = mkHome "x86_64-linux" [
-        ./hosts/zen/home.nix
-        inputs.nixcord.homeModules.nixcord
-      ];
-      "wyattgill@mac" = mkHome "aarch64-darwin" [
-        ./hosts/macos/home.nix
-      ];
+      "wyattgill@zen" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.x86_64-linux;
+        extraSpecialArgs = {inherit inputs;};
+        modules = [
+          ./hosts/zen/home.nix
+          inputs.nixcord.homeModules.nixcord
+        ];
+      };
+      "wyattgill@mac" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.aarch64-darwin;
+        extraSpecialArgs = {inherit inputs;};
+        modules = [./hosts/macos/home.nix];
+      };
     };
   };
 }

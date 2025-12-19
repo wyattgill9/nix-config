@@ -18,7 +18,7 @@
     settings = {
       user = {
         name = "Wyatt Gill";
-        email= "wyattgill01@outlook.com";
+        email = "wyattgill01@outlook.com";
       };
     };
   };

@@ -40,16 +40,15 @@ in {
         source <(jj util completion zsh)
       '';
 
-      shellAliases =
-        {
-          cd = "z";
-          cdi = "zi";
-          c = "clear";
-          cat = "bat";
-          ls = "lsd";
-          cmk = "cmake -S . -B build -G Ninja && cmake --build build";
-          vim = "nvim";
-        };
+      shellAliases = {
+        cd = "z";
+        cdi = "zi";
+        c = "clear";
+        cat = "bat";
+        ls = "lsd";
+        cmk = "cmake -S . -B build -G Ninja && cmake --build build";
+        vim = "nvim";
+      };
     };
 
     direnv = {

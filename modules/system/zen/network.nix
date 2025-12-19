@@ -31,7 +31,10 @@
 
       allowedTCPPorts = [22]; # SSH
       allowedUDPPortRanges = [
-        { from = 60000; to = 61000; } # Mosh
+        {
+          from = 60000;
+          to = 61000;
+        } # Mosh
       ];
     };
   };
@@ -39,7 +42,7 @@
   services.tailscale = {
     enable = true;
   };
-    
+
   environment.systemPackages = with pkgs; [
     mosh
     networkmanagerapplet

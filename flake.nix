@@ -30,13 +30,13 @@
     home-manager,
     ...
   } @ inputs: let
-    systems = ["x86_64-linux" "aarch64-darwin"];
+    systems = [ "x86_64-linux" "aarch64-darwin" ];
     forAllSystems = fn: nixpkgs.lib.genAttrs systems (system: fn nixpkgs.legacyPackages.${system});
   in {
     formatter = forAllSystems (
       pkgs:
         pkgs.treefmt.withConfig {
-          runtimeInputs = [pkgs.alejandra];
+          runtimeInputs = [ pkgs.alejandra ];
           settings = {
             on-unmatched = "info";
             formatter.alejandra = {
@@ -49,7 +49,7 @@
 
     devShells = forAllSystems (pkgs: {
       default = pkgs.mkShellNoCC {
-        packages = [pkgs.nixd];
+        packages = [ pkgs.nixd ];
       };
     });
 

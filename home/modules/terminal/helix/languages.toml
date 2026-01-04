@@ -2,7 +2,7 @@ use-grammars = { only = [ "cpp", "rust", "haskell", "scheme", "python", "nix", "
 
 [[language]]
 name = "cpp"
-file-types = [ "cpp", "hpp", "c", "h", "cppm", "cc" ,"hh" ]
+file-types = [ "cpp", "hpp", "c", "h", "cppm", "cc" ,"hh", "zcc", "zhh" ]
 indent = { tab-width = 4, unit = "    " }
 
 [[language]]

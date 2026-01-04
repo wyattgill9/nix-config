@@ -16,15 +16,20 @@
 
     settings = {
       font-family = "0xProto Nerd Font";
-      window-decoration = !pkgs.stdenv.isLinux;
+      theme = "tokyonight_night";
+      background-opacity = 0.8;
+
+      keybind = [
+        "super+h=goto_split:left"
+        "super+l=goto_split:right"
+      ];
+
+      window-decoration = !pkgs.stdenv.isLinux; # The bar above
       gtk-titlebar = true;
       gtk-single-instance = true;
 
       # custom-shader-animation = true;
       # custom-shader = "shaders/cursor_warp.glsl";
-
-      background-opacity = 0.8;
-      theme = "tokyonight_night";
     };
 
     themes = {

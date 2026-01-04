@@ -11,7 +11,7 @@
       then pkgs.ghostty
       else null;
 
-    enableZshIntegration = true;
+    enableFishIntegration = true;
     installBatSyntax = pkgs.stdenv.isLinux;
 
     settings = {

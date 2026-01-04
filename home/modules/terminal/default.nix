@@ -4,7 +4,7 @@
     ./helix
     ./tmux.nix
 
-    ./zsh.nix
+    ./fish.nix
 
     ./vcs.nix
 

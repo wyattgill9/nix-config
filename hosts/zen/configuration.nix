@@ -20,7 +20,7 @@
       "input"
       "seat"
     ];
-    shell = pkgs.zsh;
+    shell = pkgs.fish;
   };
 
   system.stateVersion = "24.05";

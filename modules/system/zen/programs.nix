@@ -1,12 +1,12 @@
 {...}: {
   programs = {
-    zsh.enable = true;
+    fish.enable = true;
 
     nix-ld.enable = true;
 
     nix-index = {
       enable = true;
-      enableZshIntegration = true;
+      enableFishIntegration = true;
     };
 
     # APPIMAGES

@@ -4,7 +4,7 @@ theme = "tokyonight"
 idle-timeout = 50
 true-color = true
 mouse = false
-shell = ["zsh", "-c"]
+shell = ["fish", "-c"]
 completion-replace = true
 bufferline = "multiple"
 

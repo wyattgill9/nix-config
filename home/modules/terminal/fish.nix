@@ -4,6 +4,7 @@
       enable = true;
 
       interactiveShellInit = ''
+        set -U fish_greeting ""
         fish_config theme choose none
         
         if test (uname) = "Darwin"

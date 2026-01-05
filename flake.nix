@@ -23,6 +23,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.flake-compat.follows = "";
     };
+    rawgrep = {
+      url = "github:rakivo/rawgrep";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {

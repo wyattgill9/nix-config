@@ -2,7 +2,7 @@
   home.packages = with pkgs; [
     google-chrome
     zoom-us
-    xfce.thunar
+    thunar
     spotify
     networkmanagerapplet
   ];

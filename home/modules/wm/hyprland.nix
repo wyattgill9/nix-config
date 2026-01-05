@@ -69,16 +69,20 @@
       $mainMod = SUPER
 
       bind = $mainMod SHIFT, Z, exec, rofi -show drun -theme ~/.config/rofi/config.rasi     
-
       bind = $mainMod, Q, exec, $terminal
-      bind = $mainMod, C, killactive,
-      bind = $mainMod, M, exit,
       bind = $mainMod, E, exec, $fileManager
-      bind = $mainMod, F,fullscreen
+
+      bind = $mainMod, C, killactive,
+      bind = $mainMod, F, fullscreen
+
       bind = $mainMod, V, togglefloating,
-      bind = $mainMod, R, exec, $menu
-      bind = $mainMod, P, pseudo, # dwindle
-      bind = $mainMod, J, togglesplit, # dwindle
+      bind = $mainMod, P, togglesplit,
+
+      bind = $mainMod, H, movefocus, l
+      bind = $mainMod, L, movefocus, r
+      bind = $mainMod, K, movefocus, u
+      bind = $mainMod, J, movefocus, d
+
       bind = $mainMod, left, movefocus, l
       bind = $mainMod, right, movefocus, r
       bind = $mainMod, up, movefocus, u
@@ -91,9 +95,6 @@
       bind = $mainMod, 5, workspace, 5
       bind = $mainMod, 6, workspace, 6
       bind = $mainMod, 7, workspace, 7
-      bind = $mainMod, 8, workspace, 8
-      bind = $mainMod, 9, workspace, 9
-      bind = $mainMod, 0, workspace, 10
 
       bind = $mainMod SHIFT, 1, movetoworkspace, 1
       bind = $mainMod SHIFT, 2, movetoworkspace, 2
@@ -102,19 +103,13 @@
       bind = $mainMod SHIFT, 5, movetoworkspace, 5
       bind = $mainMod SHIFT, 6, movetoworkspace, 6
       bind = $mainMod SHIFT, 7, movetoworkspace, 7
-      bind = $mainMod SHIFT, 8, movetoworkspace, 8
-      bind = $mainMod SHIFT, 9, movetoworkspace, 9
-      bind = $mainMod SHIFT, 0, movetoworkspace, 10
 
+      # Secret Workspace - IDK
       bind = $mainMod, S, togglespecialworkspace, magic
       bind = $mainMod SHIFT, S, movetoworkspace, special:magic
 
-      bind = $mainMod, mouse_down, workspace, e+1
-      bind = $mainMod, mouse_up, workspace, e-1
-
       bindm = $mainMod, mouse:272, movewindow
       bindm = $mainMod, mouse:273, resizewindow
-
 
       general {
           gaps_in = 5
@@ -201,9 +196,10 @@
       #############
 
       input {
-          kb_layout = us #, cn
-          kb_variant =
-          kb_model =
+          kb_layout  = # us # , cn
+          kb_options = # grp:win_space_toggle,caps:escape
+          kb_variant = #,qwerty
+          kb_model = 
           kb_options =
           kb_rules =
 

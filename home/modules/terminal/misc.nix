@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{inputs, pkgs,...}: {
   programs.bat = {
     enable = true;
     config = {
@@ -7,13 +7,18 @@
   };
 
   home.packages = with pkgs; [
+    inputs.nix-stalkr.packages.${pkgs.system}.default    
+    inputs.fsel.packages.${pkgs.system}.default    
+
     neovim
-    sd
+    claude-code
+
+    fastfetch
+
     ripgrep
     fzf
     lsd
+    sd
     tldr
-
-    fastfetch
   ];
 }

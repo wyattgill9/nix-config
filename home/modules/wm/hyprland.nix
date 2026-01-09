@@ -76,7 +76,6 @@
       bind = $mainMod, F, fullscreen
 
       bind = $mainMod, V, togglefloating,
-      bind = $mainMod, P, togglesplit,
 
       bind = $mainMod, H, movefocus, l
       bind = $mainMod, L, movefocus, r
@@ -117,28 +116,14 @@
 
           border_size = 2
 
-          # Updated colors for a darker aesthetic
           col.active_border = rgba(6a6e80ff) rgba(8bc1e5ee) 45deg
           col.inactive_border = rgba(1b1b2caa)
-
-          resize_on_border = false
-          allow_tearing = false
 
           layout = dwindle
       }
 
       decoration {
-          rounding = 10
-
           active_opacity = 1.0
-          # inactive_opacity = 0.95 # Slightly transparent inactive windows for depth
-
-          shadow {
-              enabled = true
-              range = 4
-              render_power = 3
-              color = rgba(1a1a1a80) # subtle shadow
-          }
 
           blur {
               enabled = true
@@ -150,7 +135,7 @@
       }
 
       animations {
-          enabled = yes, please :)
+          enabled = yes
 
           bezier = easeOutQuint,0.23,1,0.32,1
           bezier = easeInOutCubic,0.65,0.05,0.36,1
@@ -175,21 +160,6 @@
           animation = workspacesIn, 1, 1.21, almostLinear, fade
           animation = workspacesOut, 1, 1.94, almostLinear, fade
       }
-
-      dwindle {
-          pseudotile = true
-          preserve_split = true
-      }
-
-      master {
-          new_status = master
-      }
-
-      misc {
-          force_default_wallpaper = -1
-          disable_hyprland_logo = false
-      }
-
 
       #############
       ### INPUT ###

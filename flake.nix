@@ -12,7 +12,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.flake-compat.follows = "";
     };
-    nix-flatpak.url = "github:gmodena/nix-flatpak";
+    nix-flatpak = {
+      url = "github:gmodena/nix-flatpak";
+    };
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -23,8 +25,16 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.flake-compat.follows = "";
     };
+    fsel = {
+      url = "github:Mjoyufull/fsel";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     rawgrep = {
       url = "github:rakivo/rawgrep";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    nix-stalkr = {
+      url = "github:wyattgill9/nix-stalkr";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };

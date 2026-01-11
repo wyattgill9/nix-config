@@ -14,7 +14,5 @@
     export PATH=${pkgs.git}/bin:${pkgs.stdenv.cc}/bin:$PATH
     ${pkgs.helix}/bin/hx --grammar fetch
     ${pkgs.helix}/bin/hx --grammar build
-
-    nix-stalkr build
   '';
 }

@@ -30,6 +30,7 @@
         "cd"  = "z";
         "c"   = "clear";
         "cat" = "bat";
+        "ns"  = "nix-stalkr";
         "cmk" = "cmake -S . -B build -G Ninja && cmake --build build";
       };
  

@@ -20,5 +20,8 @@
     lsd
     sd
     tldr
+    nodejs_25
+
+    zip
   ];
 }

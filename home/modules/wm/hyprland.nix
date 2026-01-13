@@ -9,21 +9,19 @@
       ################
 
       monitor = DP-3, 1920x1080@240, 1080x0, 1
-      monitor = HDMI-A-1, 1920x1080@60, 0x-495, 1 , transform, 1
+      # monitor = HDMI-A-1, 1920x1080@60, 0x-495, 1 , transform, 1
 
       ##################
       ### WORKSPACES ###
       ##################
 
-      # Right Monitor
+      # Right (Main) Monitor
       workspace = 1, monitor:DP-3
       workspace = 2, monitor:DP-3
       workspace = 3, monitor:DP-3
       workspace = 4, monitor:DP-3
-
-      # Left Monitor
-      workspace = 5, monitor:HDMI-A-1
-      workspace = 6, monitor:HDMI-A-1
+      workspace = 5, monitor:DP-3
+      workspace = 6, monitor:DP-3
 
       ##################
       ### AUTO START ###

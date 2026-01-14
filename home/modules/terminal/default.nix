@@ -8,7 +8,6 @@
 
     ./vcs.nix
 
-    ./starship.nix
     ./zoxide.nix
     ./tui.nix
 

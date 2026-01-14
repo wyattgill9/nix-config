@@ -7,6 +7,8 @@
   };
 
   home.packages = with pkgs; [
+    nodejs_25
+
     inputs.nix-stalkr.packages.${pkgs.system}.default    
     inputs.fsel.packages.${pkgs.system}.default    
 
@@ -14,14 +16,8 @@
     claude-code
 
     fastfetch
-
     ripgrep
     fzf
-    lsd
-    sd
-    tldr
-    nodejs_25
-
     zip
   ];
 }

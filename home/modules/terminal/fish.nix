@@ -3,6 +3,25 @@
     fish = {
       enable = true;
 
+      functions = {
+        fish_prompt = ''
+          set -l last_status $status
+        
+          set_color cyan
+          echo -n (prompt_pwd)
+          set_color normal
+          echo -n ' '
+        
+          if test $last_status -eq 0
+              set_color green
+          else
+              set_color red
+          end
+          echo -n 'λ '
+          set_color normal
+        '';
+      };
+
       interactiveShellInit = ''
         set -U fish_greeting ""
         fish_config theme choose none
@@ -13,7 +32,7 @@
 
         set -e DEVELOPER_DIR
 
-        starship init fish | source
+        # starship init fish | source
         zoxide init fish | source
 
         jj util completion fish | source
@@ -26,7 +45,6 @@
 
       shellAliases = {
         "vim" = "nvim";
-        "ls"  = "lsd";
         "cd"  = "z";
         "c"   = "clear";
         "cat" = "bat";

@@ -46,6 +46,7 @@
       shellAliases = {
         "vim" = "nvim";
         "cd"  = "z";
+        "cdi" = "zi";
         "c"   = "clear";
         "cat" = "bat";
         "ns"  = "nix-stalkr";

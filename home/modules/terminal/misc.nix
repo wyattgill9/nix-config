@@ -7,10 +7,9 @@
   };
 
   home.packages = with pkgs; [
-    nodejs_25
+    # nodejs_25
 
     inputs.nix-stalkr.packages.${pkgs.system}.default    
-    inputs.fsel.packages.${pkgs.system}.default    
 
     neovim
     claude-code

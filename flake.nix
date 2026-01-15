@@ -25,10 +25,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.flake-compat.follows = "";
     };
-    fsel = {
-      url = "github:Mjoyufull/fsel";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     rawgrep = {
       url = "github:rakivo/rawgrep";
       inputs.nixpkgs.follows = "nixpkgs";

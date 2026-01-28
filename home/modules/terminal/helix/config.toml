@@ -1,0 +1,20 @@
+theme = "tokyonight"
+
+[editor]
+idle-timeout = 50
+true-color = true
+mouse = false
+shell = ["fish", "-c"]
+completion-replace = true
+bufferline = "multiple"
+
+[editor.cursor-shape]
+normal = "block"
+insert = "bar"
+select = "block"
+
+[editor.file-picker]
+hidden = false
+
+[keys.normal]
+C-p = [":run-shell-command tmux split-window -h"]

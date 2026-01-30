@@ -21,11 +21,7 @@
 
       set -sg escape-time 0
 
-      # PANE-BINDINGS
-      bind -n M-h select-pane -L
-      bind -n M-j select-pane -D
-      bind -n M-k select-pane -U
-      bind -n M-l select-pane -R
+      set -g status-style "fg=white,bg=black"
     '';
   };
 }

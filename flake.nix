@@ -7,13 +7,13 @@
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-flatpak = {
+      url = "github:gmodena/nix-flatpak";
+    };
     awww = {
       url = "git+https://codeberg.org/LGFae/awww";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.flake-compat.follows = "";
-    };
-    nix-flatpak = {
-      url = "github:gmodena/nix-flatpak";
     };
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
@@ -29,10 +29,6 @@
       url = "github:rakivo/rawgrep";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nix-stalkr = {
-      url = "github:wyattgill9/nix-stalkr";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = {
@@ -40,7 +36,7 @@
     home-manager,
     ...
   } @ inputs: let
-    systems = [ "x86_64-linux" "aarch64-darwin" ];
+    systems = [ "x86_64-linux" ];
     forAllSystems = fn: nixpkgs.lib.genAttrs systems (system: fn nixpkgs.legacyPackages.${system});
   in {
     formatter = forAllSystems (
@@ -79,11 +75,6 @@
           ./hosts/zen/home.nix
           inputs.nixcord.homeModules.nixcord
         ];
-      };
-      "wyattgill@mac" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.aarch64-darwin;
-        extraSpecialArgs = {inherit inputs;};
-        modules = [./hosts/macos/home.nix];
       };
     };
   };

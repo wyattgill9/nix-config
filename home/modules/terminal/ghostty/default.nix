@@ -8,7 +8,7 @@
     enable = true;
     package =
       if pkgs.stdenv.isLinux
-      then pkgs.ghostty
+      pkgs.ghostty
       else null;
 
     enableFishIntegration = true;

@@ -6,7 +6,6 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is a NixOS/Home Manager dotfiles repository using Nix flakes. It manages configurations for multiple machines:
 - **zen**: NixOS desktop (x86_64-linux) with full GUI environment (Hyprland/Sway)
-- **mac**: macOS laptop (aarch64-darwin) with terminal-only configuration
 
 ## Build & Deployment Commands
 
@@ -16,9 +15,6 @@ sudo nixos-rebuild switch --flake ~/nx#zen
 
 # Home Manager - Linux (zen)
 home-manager switch --flake ~/nx#wyattgill@zen
-
-# Home Manager - macOS
-home-manager switch --flake ~/nx#wyattgill@mac
 
 # Format all Nix files with alejandra
 nix fmt
@@ -47,7 +43,6 @@ nix develop
 
 3. **Profile Layer** (`home/profiles/`): Composition of modules
    - `linux.nix`: Full desktop (app + terminal + wm)
-   - `macos.nix`: Terminal-only (no GUI/WM)
    - `minimal.nix`: Empty placeholder
 
 ### Module Organization Pattern
@@ -72,9 +67,6 @@ This pattern cascades: profiles import module categories, module categories impo
 - `configuration.nix`: System config, imports system modules and home-manager as NixOS module
 - `hardware.nix`: Auto-generated hardware configuration
 - `home.nix`: User config, imports appropriate profile
-
-**macOS hosts** (`hosts/macos/`):
-- `home.nix`: User config only (no system-level configuration)
 
 ### Flake Input Integration
 
@@ -113,11 +105,6 @@ Examples: `ghostty/`, `helix/`, `rofi/` store raw config files alongside module 
 ```nix
 # Package conditionals
 package = if pkgs.stdenv.isLinux then pkgs.ghostty else null;
-
-# Shell conditionals (Fish)
-if test (uname) = "Darwin"
-  # macOS-specific
-end
 ```
 
 ## Common Workflows
@@ -186,7 +173,6 @@ security.wrappers.rawgrep = {
 
 - System modules: `/home/wyattgill/nx/modules/system/zen/`
 - User modules: `/home/wyattgill/nx/home/modules/{app,terminal,wm}/`
-- Host configs: `/home/wyattgill/nx/hosts/{zen,macos}/`
 - Profiles: `/home/wyattgill/nx/home/profiles/`
 - Wallpapers: `/home/wyattgill/nx/wallpapers/`
 

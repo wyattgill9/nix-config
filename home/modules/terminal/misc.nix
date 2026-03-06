@@ -9,8 +9,6 @@
   home.packages = with pkgs; [
     # nodejs_25
 
-    inputs.nix-stalkr.packages.${pkgs.system}.default    
-
     neovim
     claude-code
 

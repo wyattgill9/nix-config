@@ -1,8 +1,3 @@
-{pkgs, ...}: {
-  home.packages = with pkgs;
-    [
-    ]
-    ++ pkgs.lib.optionals pkgs.stdenv.isLinux [
-      foot
-    ];
+{pkgs, lib, ...}: {
+  home.packages = lib.optionals pkgs.stdenv.isLinux [pkgs.foot];
 }

@@ -33,7 +33,6 @@
       exec-once = awww-daemon
           
       exec-once = waybar
-      exec-once = hyprsunset
 
       exec-once = hyprctl setcursor Adwaita 24
 
@@ -91,15 +90,12 @@
       bind = $mainMod, 4, workspace, 4
       bind = $mainMod, 5, workspace, 5
       bind = $mainMod, 6, workspace, 6
-      bind = $mainMod, 7, workspace, 7
-
       bind = $mainMod SHIFT, 1, movetoworkspace, 1
       bind = $mainMod SHIFT, 2, movetoworkspace, 2
       bind = $mainMod SHIFT, 3, movetoworkspace, 3
       bind = $mainMod SHIFT, 4, movetoworkspace, 4
       bind = $mainMod SHIFT, 5, movetoworkspace, 5
       bind = $mainMod SHIFT, 6, movetoworkspace, 6
-      bind = $mainMod SHIFT, 7, movetoworkspace, 7
 
       # Secret Workspace - IDK
       bind = $mainMod, S, togglespecialworkspace, magic
@@ -164,15 +160,7 @@
       #############
 
       input {
-          kb_layout  = # us # , cn
-          kb_options = # grp:win_space_toggle,caps:escape
-          kb_variant = #,qwerty
-          kb_model = 
-          kb_options =
-          kb_rules =
-
           follow_mouse = 1
-
           sensitivity = 0
 
           touchpad {

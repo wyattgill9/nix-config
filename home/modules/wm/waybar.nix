@@ -46,20 +46,12 @@
           };
           sort-by-number = true;
           persistent-workspaces = {
-            "*" = 4;
-            "HDMI-A-1" = 3;
+            "DP-3" = 6;
           };
         };
         clock = {
           tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
           format-alt = "{:%Y-%m-%d}";
-        };
-        cpu = {
-          format = "  {usage}%";
-          tooltip = false;
-        };
-        memory = {
-          format = "{}%  ";
         };
         temperature = {
           critical-threshold = 80;

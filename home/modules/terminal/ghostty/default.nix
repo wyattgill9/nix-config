@@ -24,12 +24,9 @@
         "super+l=goto_split:right"
       ];
 
-      window-decoration = !pkgs.stdenv.isLinux; # The bar above
+      window-decoration = !pkgs.stdenv.isLinux;
       gtk-titlebar = true;
       gtk-single-instance = true;
-
-      # custom-shader-animation = true;
-      # custom-shader = "shaders/cursor_warp.glsl";
     };
 
     themes = {

@@ -39,19 +39,7 @@
     systems = [ "x86_64-linux" ];
     forAllSystems = fn: nixpkgs.lib.genAttrs systems (system: fn nixpkgs.legacyPackages.${system});
   in {
-    formatter = forAllSystems (
-      pkgs:
-        pkgs.treefmt.withConfig {
-          runtimeInputs = [ pkgs.alejandra ];
-          settings = {
-            on-unmatched = "info";
-            formatter.alejandra = {
-              command = "alejandra";
-              includes = ["*.nix"];
-            };
-          };
-        }
-    );
+    formatter = forAllSystems (pkgs: pkgs.alejandra);
 
     devShells = forAllSystems (pkgs: {
       default = pkgs.mkShellNoCC {

@@ -18,8 +18,4 @@
       io_graph_combined = false;
     };
   };
-
-  home.packages = [
-    # pkgs.cava
-  ];
 }

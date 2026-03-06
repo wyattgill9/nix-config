@@ -10,7 +10,7 @@
     recursive = true;
   };
 
-  home.activation.runSomething = lib.hm.dag.entryAfter ["writeBoundary"] ''
+  home.activation.buildHelixGrammars = lib.hm.dag.entryAfter ["writeBoundary"] ''
     export PATH=${pkgs.git}/bin:${pkgs.stdenv.cc}/bin:$PATH
     ${pkgs.helix}/bin/hx --grammar fetch
     ${pkgs.helix}/bin/hx --grammar build

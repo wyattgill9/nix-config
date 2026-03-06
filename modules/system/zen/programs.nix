@@ -15,11 +15,7 @@
       binfmt = true;
     };
 
-    # HYPRLAND
-    hyprland = {
-      enable = true;
-      # package = inputs.hyprland.packages."${pkgs.system}".hyprland;
-    };
+    hyprland.enable = true;
     sway = {
       enable = true;
       wrapperFeatures.gtk = true;

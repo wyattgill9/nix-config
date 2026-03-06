@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{inputs, ...}: {
   nix = {
     gc = {
       automatic = true;
@@ -6,9 +6,14 @@
       options = "--delete-older-than 30d";
     };
 
+    registry.nixpkgs.flake = inputs.nixpkgs;
+    nixPath = ["nixpkgs=${inputs.nixpkgs}"];
+
     settings = {
       auto-optimise-store = true;
-      trusted-substituters = [
+      max-jobs = "auto";
+
+      substituters = [
         "https://cache.nixos.org/"
         "https://wyattgill9.cachix.org"
         "https://cache.iog.io" # Haskell.nix
@@ -19,14 +24,12 @@
         "hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ=" # Haskell.nix
       ];
 
+      trusted-users = ["root" "@wheel"];
+
       experimental-features = [
         "nix-command"
         "flakes"
       ];
     };
   };
-
-  environment.defaultPackages = with pkgs; [
-    cachix
-  ];
 }

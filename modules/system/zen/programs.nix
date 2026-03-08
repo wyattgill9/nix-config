@@ -22,12 +22,12 @@
     };
   };
 
-  security.wrappers.rawgrep = {
-    owner = "root";
-    group = "root";
-    capabilities = "cap_dac_read_search=eip";
-    source = "${inputs.rawgrep.packages.${pkgs.system}.default}/bin/rawgrep";
-  };
+  # security.wrappers.rawgrep = {
+  #   owner = "root";
+  #   group = "root";
+  #   capabilities = "cap_dac_read_search=eip";
+  #   source = "${inputs.rawgrep.packages.${pkgs.system}.default}/bin/rawgrep";
+  # };
 
   environment.sessionVariables = {
     WLR_NO_HARDWARE_CURSORS = "1";

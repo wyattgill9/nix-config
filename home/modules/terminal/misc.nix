@@ -5,13 +5,16 @@
   };
 
   home.packages = with pkgs; [
-    neovim
     claude-code
+    codex
 
-    fastfetch
+    neovim
+    just
     ripgrep
     fzf
+    fastfetch
     zip
+
     nodejs_25
   ];
 }

@@ -67,10 +67,6 @@
         end
 
         jj util completion fish | source
-
-        set -gx BUN_INSTALL "$HOME/.bun"
-        fish_add_path "$BUN_INSTALL/bin"
-        fish_add_path $HOME/.cargo/bin
       '';
 
       shellAliases = {

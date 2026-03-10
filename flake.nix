@@ -25,6 +25,14 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.flake-compat.follows = "";
     };
+    claude-code = {
+      url = "github:sadjow/claude-code-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    codex-cli = {
+      url = "github:sadjow/codex-cli-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     # rawgrep = {
     #   url = "github:rakivo/rawgrep";
     #   inputs.nixpkgs.follows = "nixpkgs";
@@ -36,14 +44,14 @@
     home-manager,
     ...
   } @ inputs: let
-    systems = [ "x86_64-linux" ];
+    systems = ["x86_64-linux"];
     forAllSystems = fn: nixpkgs.lib.genAttrs systems (system: fn nixpkgs.legacyPackages.${system});
   in {
     formatter = forAllSystems (pkgs: pkgs.alejandra);
 
     devShells = forAllSystems (pkgs: {
       default = pkgs.mkShellNoCC {
-        packages = [ pkgs.nixd ];
+        packages = [pkgs.nixd];
       };
     });
 

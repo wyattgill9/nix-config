@@ -1,20 +1,26 @@
-{pkgs, ...}: {
+{
+  inputs,
+  pkgs,
+  ...
+}: {
   programs.bat = {
     enable = true;
     config.pager = "less -FR";
   };
 
   home.packages = with pkgs; [
-    claude-code
-    codex
+    # AI
+    inputs.claude-code.packages.${pkgs.system}.claude-code
+    inputs.codex-cli.packages  .${pkgs.system}.default
 
     neovim
+    lazygit
     just
     ripgrep
     fzf
     fastfetch
     zip
 
-    nodejs_25
+    nodejs-slim_25
   ];
 }

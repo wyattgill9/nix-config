@@ -1,0 +1,27 @@
+use-grammars = { only = [ "cpp",  "haskell", "nix", "scheme", "rust" ] }
+
+[[language]]
+name = "cpp"
+file-types = [ "cpp", "hpp", "c", "h", "cppm", "cc" ,"hh", "zcc", "zhh" ]
+indent = { tab-width = 4, unit = "    " }
+language-servers = ["clangd"]
+auto-format = false
+
+[[language]]
+name = "haskell"
+file-types = [ "hs" ]
+indent = { tab-width = 4, unit = "    " }
+language-servers = ["haskell-language-server"]
+formatter = { command = "fourmolu" , args = ["--stdin-input-file", "%{buffer_name}"] }
+auto-format = false
+
+[language-server.haskell-language-server]
+command = "haskell-language-server-wrapper"
+
+[[language]]
+name = "scheme"
+language-servers = ["steel-language-server"]
+
+[language-server.steel-language-server]
+command = "steel-language-server"
+args = []

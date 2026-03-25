@@ -58,7 +58,6 @@
     forAllSystems = fn: lib.genAttrs systems (system: fn nixpkgs.legacyPackages.${system});
 
     nxLib = import ./lib {inherit lib;};
-    overlayList = import ./overlays {inherit inputs;};
 
     zen = {
       system = "x86_64-linux";
@@ -77,12 +76,11 @@
     zenPkgs = import nixpkgs {
       system = zen.system;
       config.allowUnfree = true;
-      overlays = overlayList;
     };
 
     zenArgs =
       {
-        inherit inputs nxLib overlayList;
+        inherit inputs nxLib;
       }
       // zen;
   in {

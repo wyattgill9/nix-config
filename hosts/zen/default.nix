@@ -7,7 +7,6 @@
   inputs,
   jjName,
   nxLib,
-  overlayList,
   pkgs,
   system,
   userPublicKeys,
@@ -28,7 +27,6 @@
 
   nixpkgs = {
     config.allowUnfree = true;
-    overlays = overlayList;
   };
 
   nx.nixos.security = {
@@ -53,7 +51,6 @@
         inputs
         jjName
         nxLib
-        overlayList
         system
         userPublicKeys
         username

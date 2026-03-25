@@ -47,7 +47,7 @@ sudo nixos-rebuild switch --flake ~/nx#zen
 - `hosts/zen/home.nix` is the Home Manager entrypoint. It imports `hosts/zen/monitors.nix` plus the desktop profile.
 - `modules/nixos/` is host-agnostic system configuration. Every module is gated by `nx.nixos.<name>.enable`.
 - `modules/home/` is split into `apps/`, `desktop/`, and `terminal/`.
-- `home/profiles/linux.nix` is still the top-level composition layer for the user environment.
+- `modules/home` is the top-level shared composition layer for the user environment.
 
 ## Important Patterns
 

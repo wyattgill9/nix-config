@@ -8,7 +8,6 @@ NixOS and Home Manager dotfiles for `zen`, with shared system/home modules, host
 ~/nx
 ├── flake.nix
 ├── lib/default.nix
-├── overlays/default.nix
 ├── hosts/
 │   └── zen/
 │       ├── default.nix        # NixOS entrypoint
@@ -19,8 +18,6 @@ NixOS and Home Manager dotfiles for `zen`, with shared system/home modules, host
 ├── modules/
 │   ├── nixos/                # shared NixOS modules
 │   └── home/                 # shared Home Manager modules
-├── home/
-│   └── profiles/
 ├── secrets/
 │   ├── secrets.nix
 │   └── *.age

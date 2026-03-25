@@ -5,7 +5,7 @@
 }: {
   imports = [
     ./monitors.nix
-    ../../home/profiles/linux.nix
+    ../../modules/home
   ];
 
   home.username = username;

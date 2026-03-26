@@ -17,7 +17,6 @@
     ./disko.nix
     ./hardware.nix
     ../../modules/nixos
-    inputs.agenix.nixosModules.default
     inputs.disko.nixosModules.disko
     inputs.home-manager.nixosModules.home-manager
     inputs.impermanence.nixosModules.impermanence
@@ -27,11 +26,6 @@
 
   nixpkgs = {
     config.allowUnfree = true;
-  };
-
-  nx.nixos.security = {
-    manageTailscaleAuthKey = false;
-    manageUserPassword = false;
   };
 
   home-manager = {

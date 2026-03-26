@@ -10,7 +10,6 @@
     ./networking.nix
     ./nix.nix
     ./packages.nix
-    ./security.nix
     ./services.nix
   ];
 }

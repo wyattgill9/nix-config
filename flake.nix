@@ -11,7 +11,7 @@
       url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-nix-index-database = {
+    nix-index-database = {
       url = "github:nix-community/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
     };
@@ -50,12 +50,12 @@ nix-index-database = {
     forAllSystems = fn: lib.genAttrs systems (system: fn nixpkgs.legacyPackages.${system});
 
     zen = {
-      system   = "x86_64-linux";
+      system = "x86_64-linux";
       hostName = "zen";
       username = "wyattgill";
       fullName = "Wyatt Gill";
-      jjName   = "wyattgill9";
-      email    = "wyattgill01@outlook.com";
+      jjName = "wyattgill9";
+      email = "wyattgill01@outlook.com";
       homeDirectory = "/home/wyattgill";
     };
 

@@ -1,9 +1,4 @@
 {pkgs, ...}: {
-  home.file.".config/ghostty/shaders" = {
-    source = ./shaders;
-    recursive = true;
-  };
-
   programs.ghostty = {
     enable = true;
 

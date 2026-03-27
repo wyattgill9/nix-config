@@ -4,7 +4,7 @@
     ./fish.nix
     ./foot.nix
     ./git.nix
-    ./ghostty
+    ./ghostty.nix
     ./helix
     ./jujutsu.nix
     ./tmux.nix

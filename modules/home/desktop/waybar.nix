@@ -1,4 +1,4 @@
-{config, ...}: {
+{...}: {
   programs.waybar = {
     enable = true;
     settings = {
@@ -45,7 +45,9 @@
             active = " ";
           };
           sort-by-number = true;
-          persistent-workspaces = config.nx.desktop.waybar.persistentWorkspaces;
+          persistent-workspaces = {
+            "DP-3" = 6;
+          };
         };
         clock = {
           tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";

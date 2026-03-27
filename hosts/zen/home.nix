@@ -4,7 +4,6 @@
   ...
 }: {
   imports = [
-    ./monitors.nix
     ../../modules/home
   ];
 

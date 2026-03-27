@@ -7,25 +7,25 @@
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nix-flatpak = {
-      url = "github:gmodena/nix-flatpak";
-    };
-    impermanence = {
-      url = "github:nix-community/impermanence";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     disko = {
       url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nix-index-database = {
+nix-index-database = {
       url = "github:nix-community/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+    nix-flatpak = {
+      url = "github:gmodena/nix-flatpak";
     };
     awww = {
       url = "git+https://codeberg.org/LGFae/awww";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.flake-compat.follows = "";
+    };
+    llm-agents = {
+      url = "github:numtide/llm-agents.nix";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
@@ -36,10 +36,6 @@
       url = "github:kaylorben/nixcord";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.flake-compat.follows = "";
-    };
-    llm-agents = {
-      url = "github:numtide/llm-agents.nix";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
@@ -53,20 +49,14 @@
     systems = ["x86_64-linux"];
     forAllSystems = fn: lib.genAttrs systems (system: fn nixpkgs.legacyPackages.${system});
 
-    nxLib = import ./lib {inherit lib;};
-
     zen = {
-      system = "x86_64-linux";
+      system   = "x86_64-linux";
       hostName = "zen";
       username = "wyattgill";
       fullName = "Wyatt Gill";
-      jjName = "wyattgill9";
-      email = "wyattgill01@outlook.com";
+      jjName   = "wyattgill9";
+      email    = "wyattgill01@outlook.com";
       homeDirectory = "/home/wyattgill";
-      userPublicKeys = [
-        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAUNWNgYOg3y2uo+FTRYlyWapbcfl4yjspm02bYC/3Rs wyattgill01@outlook.com"
-      ];
-      hostPublicKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIgzuLPAnG9sfhfoz2tj7sdcdPparwW+kI+mUiNeCJPj root@zen";
     };
 
     zenPkgs = import nixpkgs {
@@ -76,7 +66,7 @@
 
     zenArgs =
       {
-        inherit inputs nxLib;
+        inherit inputs;
       }
       // zen;
   in {

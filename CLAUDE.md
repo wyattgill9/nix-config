@@ -20,14 +20,12 @@ sudo nixos-rebuild switch --flake ~/nx#zen
 ```text
 ~/nx
 ├── flake.nix
-├── lib/default.nix
 ├── overlays/default.nix
 ├── hosts/
 │   └── zen/
 │       ├── default.nix
 │       ├── hardware.nix
 │       ├── disko.nix
-│       ├── monitors.nix
 │       └── home.nix
 ├── modules/
 │   ├── nixos/
@@ -41,15 +39,13 @@ sudo nixos-rebuild switch --flake ~/nx#zen
 
 - `flake.nix` defines the host/user metadata once and passes it through `specialArgs` / `extraSpecialArgs`.
 - `hosts/zen/default.nix` is the NixOS entrypoint. It imports hardware, disko, nix-index-database, home-manager, and the shared `modules/nixos` tree.
-- `hosts/zen/home.nix` is the Home Manager entrypoint. It imports `hosts/zen/monitors.nix` plus the desktop profile.
-- `modules/nixos/` is host-agnostic system configuration. Every module is gated by `nx.nixos.<name>.enable`.
+- `hosts/zen/home.nix` is the Home Manager entrypoint. It imports the desktop profile.
+- `modules/nixos/` is host-agnostic system configuration.
 - `modules/home/` is split into `apps/`, `desktop/`, and `terminal/`.
 - `modules/home` is the top-level shared composition layer for the user environment.
 
 ## Important Patterns
 
-- Host-specific monitor/output layout belongs in `hosts/<host>/monitors.nix`, not inside the window manager modules.
-- User identity, SSH keys, and the home directory come from flake args. Do not re-hardcode them inside modules.
 - Keep `with pkgs;` scoped to package lists only.
 - Prefer structured options when the module exposes them. Hyprland should use `settings`, not raw `extraConfig`.
 

@@ -3,13 +3,10 @@
   fullName,
   homeDirectory,
   hostName,
-  hostPublicKey,
   inputs,
   jjName,
-  nxLib,
   pkgs,
   system,
-  userPublicKeys,
   username,
   ...
 }: {
@@ -19,7 +16,6 @@
     ../../modules/nixos
     inputs.disko.nixosModules.disko
     inputs.home-manager.nixosModules.home-manager
-    inputs.impermanence.nixosModules.impermanence
     inputs.nix-flatpak.nixosModules.nix-flatpak
     inputs.nix-index-database.nixosModules.nix-index
   ];
@@ -41,12 +37,9 @@
         fullName
         homeDirectory
         hostName
-        hostPublicKey
         inputs
         jjName
-        nxLib
         system
-        userPublicKeys
         username
         ;
     };
@@ -64,7 +57,6 @@
       "input"
       "seat"
     ];
-    openssh.authorizedKeys.keys = userPublicKeys;
     shell = pkgs.fish;
   };
 

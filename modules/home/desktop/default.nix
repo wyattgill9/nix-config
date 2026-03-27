@@ -5,7 +5,6 @@
     ./hyprland.nix
     ./hyprsunset.nix
     ./rofi
-    ./sway.nix
     ./wallpaper.nix
     ./waybar.nix
   ];

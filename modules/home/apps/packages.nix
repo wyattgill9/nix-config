@@ -3,5 +3,6 @@
     google-chrome
     spotify
     zoom-us
+    thunar
   ];
 }

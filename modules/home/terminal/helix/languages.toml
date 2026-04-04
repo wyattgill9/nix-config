@@ -1,8 +1,15 @@
-use-grammars = { only = [ "cpp",  "haskell", "nix", "scheme", "rust" ] }
+use-grammars = { only = [ "rust", "nix", "cpp", "haskell", "scheme", ] }
+
+[[language]]
+name = "rust"
+file-types = [ "rs" ]
+indent = { tab-width = 4, unit = "    " }
+language-servers = ["rust-analyzer"]
+auto-format = false
 
 [[language]]
 name = "cpp"
-file-types = [ "cpp", "hpp", "c", "h", "cppm", "cc" ,"hh", "zcc", "zhh" ]
+file-types = [ "cpp", "hpp", "c", "h", "cppm", "cc" ,"hh" ]
 indent = { tab-width = 4, unit = "    " }
 language-servers = ["clangd"]
 auto-format = false

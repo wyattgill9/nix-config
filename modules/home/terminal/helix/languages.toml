@@ -1,4 +1,4 @@
-use-grammars = { only = [ "rust", "nix", "cpp", "haskell", "scheme", "lean" ] }
+use-grammars = { only = [ "rust", "nix", "cpp", "haskell", "scheme", "lean", "markdown" ] }
 
 [[language]]
 name = "rust"
@@ -24,6 +24,14 @@ auto-format = false
 
 [language-server.haskell-language-server]
 command = "haskell-language-server-wrapper"
+
+[[language]]
+name = "markdown"
+file-types = [ "md", "mdx" ]
+language-servers = ["markdown-oxide"]
+
+[language-server.markdown-oxide]
+command = "markdown-oxide"
 
 [[language]]
 name = "scheme"

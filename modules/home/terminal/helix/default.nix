@@ -5,6 +5,10 @@
 }: {
   programs.helix.enable = true;
 
+  home.packages = with pkgs; [
+    markdown-oxide
+  ];
+
   home.file.".config/helix" = {
     source = ./.;
     recursive = true;

@@ -14,5 +14,6 @@
     nodejs-slim_25
     ripgrep
     zip
+    elan
   ];
 }

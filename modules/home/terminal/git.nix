@@ -11,5 +11,8 @@
         email = email;
       };
     };
+    signing = {
+      format = null;
+    };
   };
 }

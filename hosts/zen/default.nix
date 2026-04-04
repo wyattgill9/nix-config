@@ -58,6 +58,10 @@
       "seat"
     ];
     shell = pkgs.fish;
+
+    openssh.authorizedKeys.keys = [
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGH1UfKsEvOGtb+6KdzGNL2BJ4fGefmsHRP7BG7fvHg4 wyattgill01@outlook.com"
+    ];
   };
 
   system.stateVersion = "24.05";

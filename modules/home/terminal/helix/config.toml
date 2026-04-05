@@ -18,4 +18,5 @@ select = "block"
 hidden = false
 
 [keys.normal]
-C-p = [":run-shell-command tmux split-window -h"]
+g = { q = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw", ":reload-all"] }
+

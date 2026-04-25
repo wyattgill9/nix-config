@@ -15,6 +15,13 @@ language-servers = ["clangd"]
 auto-format = false
 
 [[language]]
+name = "lean"
+file-types = [ "lean" ]
+indent = { tab-width = 4, unit = "    " }
+language-servers = ["lean"]
+rulers = []
+
+[[language]]
 name = "haskell"
 file-types = [ "hs" ]
 indent = { tab-width = 4, unit = "    " }

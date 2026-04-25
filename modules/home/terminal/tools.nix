@@ -6,14 +6,16 @@
 
   home.packages = with pkgs; [
     bun
-    fastfetch
-    fzf
-    just
-    lazygit
-    neovim
     nodejs
+
+    neovim
+    lazygit
+
+    just
     ripgrep
+    fzf
     zip
-    elan
+
+    fastfetch
   ];
 }

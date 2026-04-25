@@ -26,7 +26,7 @@
 
   home-manager = {
     sharedModules = [
-      inputs.nixcord.homeModules.nixcord
+      # inputs.nixcord.homeModules.nixcord
       inputs.nix-index-database.homeModules.nix-index
     ];
     useGlobalPkgs = true;

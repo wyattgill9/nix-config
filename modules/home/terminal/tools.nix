@@ -11,7 +11,7 @@
     just
     lazygit
     neovim
-    nodejs-slim_25
+    nodejs
     ripgrep
     zip
     elan

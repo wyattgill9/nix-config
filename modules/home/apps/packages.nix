@@ -12,6 +12,7 @@
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
     google-chrome
 
+    discord
     spotify
     zoom-us
     thunar

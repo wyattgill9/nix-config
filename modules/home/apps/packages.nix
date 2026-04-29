@@ -13,6 +13,7 @@
     google-chrome
 
     discord
+    obsidian
     spotify
     zoom-us
     thunar

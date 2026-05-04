@@ -2,7 +2,6 @@
   pkgs,
   lib,
   ...
-}:
-{
-  home.packages = lib.optionals pkgs.stdenv.isLinux [ pkgs.foot ];
+}: {
+  home.packages = lib.optionals pkgs.stdenv.isLinux [pkgs.foot];
 }

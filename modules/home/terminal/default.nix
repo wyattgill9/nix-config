@@ -1,5 +1,4 @@
-{ ... }:
-{
+{...}: {
   imports = [
     ./ai.nix
     ./fish.nix

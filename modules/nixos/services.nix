@@ -1,5 +1,4 @@
-{ ... }:
-{
+{...}: {
   services = {
     printing.enable = true;
 
@@ -10,7 +9,7 @@
     keyd = {
       enable = true;
       keyboards.default = {
-        ids = [ "*" ];
+        ids = ["*"];
         settings.main.capslock = "esc";
       };
     };

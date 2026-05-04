@@ -9,7 +9,8 @@
   system,
   username,
   ...
-}: {
+}:
+{
   imports = [
     ./disko.nix
     ./hardware.nix

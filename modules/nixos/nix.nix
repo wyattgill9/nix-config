@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   nix = {
     channel.enable = false;
     gc = {
@@ -6,8 +7,8 @@
       dates = "weekly";
       options = "--delete-older-than 30d";
     };
-    nixPath = [];
-    registry = {};
+    nixPath = [ ];
+    registry = { };
 
     settings = {
       auto-optimise-store = true;
@@ -32,7 +33,10 @@
         "hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ="
       ];
 
-      trusted-users = ["root" "@wheel"];
+      trusted-users = [
+        "root"
+        "@wheel"
+      ];
 
       experimental-features = [
         "nix-command"

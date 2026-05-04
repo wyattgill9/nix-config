@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   services.hyprsunset = {
     enable = false;
     transitions = {
@@ -9,7 +10,7 @@
             "temperature"
             "6500"
           ]
-          ["gamma 100"]
+          [ "gamma 100" ]
         ];
       };
 

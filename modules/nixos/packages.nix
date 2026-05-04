@@ -2,7 +2,8 @@
   inputs,
   pkgs,
   ...
-}: {
+}:
+{
   environment.systemPackages = with pkgs; [
     bind
     cachix

@@ -13,10 +13,13 @@
     google-chrome
 
     discord
-    obsidian
     spotify
+    obsidian
     zoom-us
     thunar
+    thunderbird
+    
+
     lunar-client
   ];
 }

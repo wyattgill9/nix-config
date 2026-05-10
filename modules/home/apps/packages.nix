@@ -18,6 +18,7 @@
     zoom-us
     thunar
     thunderbird
+    vlc
 
     lunar-client
   ];

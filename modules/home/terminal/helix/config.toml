@@ -17,6 +17,9 @@ select = "block"
 [editor.file-picker]
 hidden = false
 
+[editor.soft-wrap]
+enable = true
+
 [keys.normal]
 g = { q = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw", ":reload-all"] }
 

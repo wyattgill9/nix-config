@@ -14,6 +14,7 @@
     firefox
 
     discord
+    element-desktop
     spotify
     obsidian
     zoom-us

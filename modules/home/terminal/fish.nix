@@ -66,10 +66,6 @@
         set -g fish_greeting
         fish_config theme choose none
 
-        if test (uname) = "Darwin"
-          source /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.fish
-        end
-
         jj util completion fish | source
       '';
 

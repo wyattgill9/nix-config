@@ -1,6 +1,5 @@
 {...}: {
   imports = [
-    ./apps
     ./desktop
     ./terminal
   ];

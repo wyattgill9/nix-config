@@ -7,5 +7,6 @@
     ./rofi
     ./wallpaper.nix
     ./waybar.nix
+    ./apps.nix
   ];
 }

@@ -11,10 +11,6 @@
       url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nix-index-database = {
-      url = "github:nix-community/nix-index-database";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     nix-flatpak = {
       url = "github:gmodena/nix-flatpak";
     };
@@ -32,11 +28,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };
-    # nixcord = {
-    #   url = "github:kaylorben/nixcord";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    #   inputs.flake-compat.follows = "";
-    # };
   };
 
   outputs = {
@@ -92,7 +83,6 @@
         extraSpecialArgs = zenArgs;
         modules = [
           ./hosts/zen/home.nix
-          # inputs.nixcord.homeModules.nixcord
           inputs.nix-index-database.homeModules.nix-index
         ];
       };

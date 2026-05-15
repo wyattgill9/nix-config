@@ -17,7 +17,6 @@
     inputs.disko.nixosModules.disko
     inputs.home-manager.nixosModules.home-manager
     inputs.nix-flatpak.nixosModules.nix-flatpak
-    inputs.nix-index-database.nixosModules.nix-index
   ];
 
   nixpkgs = {
@@ -25,10 +24,6 @@
   };
 
   home-manager = {
-    sharedModules = [
-      # inputs.nixcord.homeModules.nixcord
-      inputs.nix-index-database.homeModules.nix-index
-    ];
     useGlobalPkgs = true;
     useUserPackages = true;
     extraSpecialArgs = {

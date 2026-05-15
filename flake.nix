@@ -69,7 +69,7 @@
         default = pkgs.mkShellNoCC {
           packages = [
             pkgs.nixd
-            pkgs.nixfmt-rfc-style
+            pkgs.nixfmt
             pkgs.statix
             pkgs.deadnix
           ];

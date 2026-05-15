@@ -1,9 +1,22 @@
 {
   email,
+  fullName,
   jjName,
-  pkgs,
   ...
 }: {
+  programs.git = {
+    enable = true;
+    settings = {
+      user = {
+        name = fullName;
+        email = email;
+      };
+    };
+    signing = {
+      format = null;
+    };
+  };
+
   programs.jujutsu = {
     enable = true;
     settings = {
@@ -17,8 +30,4 @@
       };
     };
   };
-
-  home.packages = with pkgs; [
-    lazyjj
-  ];
 }

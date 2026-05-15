@@ -1,4 +1,9 @@
 {pkgs, ...}: {
+  programs.nh = {
+    enable = true;
+    clean.enable = true;
+  };
+  
   programs.bat = {
     enable = true;
     config.pager = "less -FR";
@@ -8,12 +13,10 @@
     bun
     nodejs
 
-    neovim
-    lazygit
-
     just
     ripgrep
     fzf
+
     zip
 
     fastfetch

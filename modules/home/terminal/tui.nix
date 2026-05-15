@@ -1,9 +1,10 @@
-{pkgs, ...}: {
+{
+  inputs,
+  pkgs,
+  ...
+}: {
   programs.btop = {
     enable = true;
-    package = pkgs.btop.override {
-      rocmSupport = pkgs.stdenv.isLinux;
-    };
     settings = {
       vim_keys = true;
       rounded_corners = true;
@@ -18,4 +19,13 @@
       io_graph_combined = false;
     };
   };
+
+  home.packages = with pkgs; [
+    inputs.llm-agents.packages.${pkgs.stdenv.hostPlatform.system}.claude-code
+    inputs.llm-agents.packages.${pkgs.stdenv.hostPlatform.system}.codex
+
+    neovim
+    lazygit
+    lazyjj
+  ];
 }

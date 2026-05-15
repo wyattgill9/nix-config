@@ -83,7 +83,6 @@
         extraSpecialArgs = zenArgs;
         modules = [
           ./hosts/zen/home.nix
-          inputs.nix-index-database.homeModules.nix-index
         ];
       };
     };

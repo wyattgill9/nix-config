@@ -1,4 +1,4 @@
-{...}: {
+_: {
   nix = {
     channel.enable = false;
     gc = {
@@ -6,8 +6,8 @@
       dates = "weekly";
       options = "--delete-older-than 30d";
     };
-    nixPath = [];
-    registry = {};
+    nixPath = [ ];
+    registry = { };
 
     settings = {
       auto-optimise-store = true;

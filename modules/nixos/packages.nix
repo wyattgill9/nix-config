@@ -1,16 +1,13 @@
+{ pkgs, ... }:
 {
-  inputs,
-  pkgs,
-  ...
-}: {
-  environment.systemPackages = with pkgs; [
-    bind
-    cachix
-    curl
-    ethtool
-    git
-    home-manager
-    mosh
-    perf
+  environment.systemPackages = [
+    pkgs.bind
+    pkgs.cachix
+    pkgs.curl
+    pkgs.ethtool
+    pkgs.git
+    pkgs.home-manager
+    pkgs.mosh
+    pkgs.perf
   ];
 }

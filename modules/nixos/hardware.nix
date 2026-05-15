@@ -1,12 +1,13 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   hardware = {
     graphics = {
       enable = true;
-      extraPackages = with pkgs; [
-        libvdpau-va-gl
-        libva-vdpau-driver
-        mesa
-        mesa.opencl
+      extraPackages = [
+        pkgs.libvdpau-va-gl
+        pkgs.libva-vdpau-driver
+        pkgs.mesa
+        pkgs.mesa.opencl
       ];
     };
 

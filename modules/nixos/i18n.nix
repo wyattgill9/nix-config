@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   time.timeZone = "America/Los_Angeles";
 
   i18n = {
@@ -8,10 +9,10 @@
       type = "fcitx5";
       fcitx5 = {
         waylandFrontend = true;
-        addons = with pkgs; [
-          fcitx5-gtk
-          qt6Packages.fcitx5-chinese-addons
-          fcitx5-nord
+        addons = [
+          pkgs.fcitx5-gtk
+          pkgs.qt6Packages.fcitx5-chinese-addons
+          pkgs.fcitx5-nord
         ];
       };
     };
@@ -22,9 +23,9 @@
 
   fonts = {
     enableDefaultPackages = true;
-    packages = with pkgs; [
-      nerd-fonts._0xproto
-      noto-fonts
+    packages = [
+      pkgs.nerd-fonts._0xproto
+      pkgs.noto-fonts
     ];
 
     fontconfig.enable = true;

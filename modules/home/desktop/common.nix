@@ -1,11 +1,12 @@
-{pkgs, ...}: {
-  home.packages = with pkgs; [
-    adwaita-icon-theme
-    libnotify
-    lxqt.lxqt-policykit
-    networkmanagerapplet
-    pavucontrol
-    wl-clipboard
+{ pkgs, ... }:
+{
+  home.packages = [
+    pkgs.adwaita-icon-theme
+    pkgs.libnotify
+    pkgs.lxqt.lxqt-policykit
+    pkgs.networkmanagerapplet
+    pkgs.pavucontrol
+    pkgs.wl-clipboard
   ];
 
   home.sessionVariables = {

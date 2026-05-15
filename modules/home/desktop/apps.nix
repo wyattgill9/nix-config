@@ -2,13 +2,14 @@
   inputs,
   pkgs,
   ...
-}: {
+}:
+{
   programs.obs-studio = {
     enable = true;
 
-    plugins = with pkgs.obs-studio-plugins; [
-      obs-pipewire-audio-capture
-      obs-vaapi
+    plugins = [
+      pkgs.obs-studio-plugins.obs-pipewire-audio-capture
+      pkgs.obs-studio-plugins.obs-vaapi
     ];
   };
 
@@ -17,20 +18,20 @@
     language = "en_US";
   };
 
-  home.packages = with pkgs; [
+  home.packages = [
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
-    google-chrome
-    firefox
+    pkgs.google-chrome
+    pkgs.firefox
 
-    discord
-    element-desktop
-    spotify
-    obsidian
-    zoom-us
-    thunar
-    thunderbird
-    vlc
+    pkgs.discord
+    pkgs.element-desktop
+    pkgs.spotify
+    pkgs.obsidian
+    pkgs.zoom-us
+    pkgs.thunar
+    pkgs.thunderbird
+    pkgs.vlc
 
-    lunar-client
+    pkgs.lunar-client
   ];
 }

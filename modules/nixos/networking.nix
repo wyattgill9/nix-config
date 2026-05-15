@@ -1,4 +1,5 @@
-{hostName, ...}: {
+{ hostName, ... }:
+{
   networking = {
     inherit hostName;
     useNetworkd = false;
@@ -27,7 +28,7 @@
 
     firewall = {
       enable = true;
-      allowedTCPPorts = [22];
+      allowedTCPPorts = [ 22 ];
       allowedUDPPortRanges = [
         {
           from = 60000;
@@ -39,7 +40,7 @@
 
   services.tailscale = {
     enable = true;
-    extraSetFlags = ["--accept-dns=false"];
-    extraUpFlags = ["--accept-dns=false"];
+    extraSetFlags = [ "--accept-dns=false" ];
+    extraUpFlags = [ "--accept-dns=false" ];
   };
 }

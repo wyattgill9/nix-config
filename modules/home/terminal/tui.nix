@@ -2,7 +2,8 @@
   inputs,
   pkgs,
   ...
-}: {
+}:
+{
   programs.btop = {
     enable = true;
     settings = {
@@ -20,12 +21,12 @@
     };
   };
 
-  home.packages = with pkgs; [
+  home.packages = [
     inputs.llm-agents.packages.${pkgs.stdenv.hostPlatform.system}.claude-code
     inputs.llm-agents.packages.${pkgs.stdenv.hostPlatform.system}.codex
 
-    neovim
-    lazygit
-    lazyjj
+    pkgs.neovim
+    pkgs.lazygit
+    pkgs.lazyjj
   ];
 }

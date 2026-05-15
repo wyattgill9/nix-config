@@ -3,13 +3,14 @@
   fullName,
   jjName,
   ...
-}: {
+}:
+{
   programs.git = {
     enable = true;
     settings = {
       user = {
         name = fullName;
-        email = email;
+        inherit email;
       };
     };
     signing = {
@@ -22,7 +23,7 @@
     settings = {
       user = {
         name = jjName;
-        email = email;
+        inherit email;
       };
       ui = {
         default-command = "log";

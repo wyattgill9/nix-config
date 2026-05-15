@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   programs.nh = {
     enable = true;
     clean.enable = true;
@@ -9,16 +10,16 @@
     config.pager = "less -FR";
   };
 
-  home.packages = with pkgs; [
-    bun
-    nodejs
+  home.packages = [
+    pkgs.bun
+    pkgs.nodejs
 
-    just
-    ripgrep
-    fzf
+    pkgs.just
+    pkgs.ripgrep
+    pkgs.fzf
 
-    zip
+    pkgs.zip
 
-    fastfetch
+    pkgs.fastfetch
   ];
 }

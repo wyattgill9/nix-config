@@ -30,61 +30,68 @@
     };
   };
 
-  outputs = {
-    nixpkgs,
-    home-manager,
-    ...
-  } @ inputs: let
-    inherit (nixpkgs) lib;
+  outputs =
+    {
+      nixpkgs,
+      home-manager,
+      ...
+    }@inputs:
+    let
+      inherit (nixpkgs) lib;
 
-    systems = ["x86_64-linux"];
-    forAllSystems = fn: lib.genAttrs systems (system: fn nixpkgs.legacyPackages.${system});
+      systems = [ "x86_64-linux" ];
+      forAllSystems = fn: lib.genAttrs systems (system: fn nixpkgs.legacyPackages.${system});
 
-    zen = {
-      system = "x86_64-linux";
-      hostName = "zen";
-      username = "wyattgill";
-      fullName = "Wyatt Gill";
-      jjName = "wyattgill9";
-      email = "wyattgill01@outlook.com";
-      homeDirectory = "/home/wyattgill";
-    };
+      zen = {
+        system = "x86_64-linux";
+        hostName = "zen";
+        username = "wyattgill";
+        fullName = "Wyatt Gill";
+        jjName = "wyattgill9";
+        email = "wyattgill01@outlook.com";
+        homeDirectory = "/home/wyattgill";
+      };
 
-    zenPkgs = import nixpkgs {
-      system = zen.system;
-      config.allowUnfree = true;
-    };
+      zenPkgs = import nixpkgs {
+        inherit (zen) system;
+        config.allowUnfree = true;
+      };
 
-    zenArgs =
-      {
+      zenArgs = {
         inherit inputs;
       }
       // zen;
-  in {
-    formatter = forAllSystems (pkgs: pkgs.alejandra);
+    in
+    {
+      formatter = forAllSystems (pkgs: pkgs.nixfmt-rfc-style);
 
-    devShells = forAllSystems (pkgs: {
-      default = pkgs.mkShellNoCC {
-        packages = [pkgs.nixd];
-      };
-    });
+      devShells = forAllSystems (pkgs: {
+        default = pkgs.mkShellNoCC {
+          packages = [
+            pkgs.nixd
+            pkgs.nixfmt-rfc-style
+            pkgs.statix
+            pkgs.deadnix
+          ];
+        };
+      });
 
-    nixosConfigurations.${zen.hostName} = lib.nixosSystem {
-      system = zen.system;
-      specialArgs = zenArgs;
-      modules = [
-        ./hosts/zen/default.nix
-      ];
-    };
-
-    homeConfigurations = {
-      "${zen.username}@${zen.hostName}" = home-manager.lib.homeManagerConfiguration {
-        pkgs = zenPkgs;
-        extraSpecialArgs = zenArgs;
+      nixosConfigurations.${zen.hostName} = lib.nixosSystem {
+        inherit (zen) system;
+        specialArgs = zenArgs;
         modules = [
-          ./hosts/zen/home.nix
+          ./hosts/zen/default.nix
         ];
       };
+
+      homeConfigurations = {
+        "${zen.username}@${zen.hostName}" = home-manager.lib.homeManagerConfiguration {
+          pkgs = zenPkgs;
+          extraSpecialArgs = zenArgs;
+          modules = [
+            ./hosts/zen/home.nix
+          ];
+        };
+      };
     };
-  };
 }

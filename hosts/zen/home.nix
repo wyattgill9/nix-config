@@ -2,15 +2,17 @@
   homeDirectory,
   username,
   ...
-}: {
+}:
+{
   imports = [
     ../../modules/home
   ];
 
-  home.username = username;
-  home.homeDirectory = homeDirectory;
-  home.stateVersion = "24.05";
-  home.preferXdgDirectories = true;
+  home = {
+    inherit username homeDirectory;
+    stateVersion = "24.05";
+    preferXdgDirectories = true;
+  };
 
   systemd.user.startServices = "sd-switch";
   programs.home-manager.enable = true;

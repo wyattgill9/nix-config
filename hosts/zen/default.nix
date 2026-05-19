@@ -4,7 +4,6 @@
   homeDirectory,
   hostName,
   inputs,
-  jjName,
   pkgs,
   system,
   username,
@@ -34,7 +33,6 @@
         homeDirectory
         hostName
         inputs
-        jjName
         system
         username
         ;

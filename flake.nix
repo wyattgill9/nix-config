@@ -47,7 +47,6 @@
         hostName = "zen";
         username = "wyattgill";
         fullName = "Wyatt Gill";
-        jjName = "wyattgill9";
         email = "wyattgill01@outlook.com";
         homeDirectory = "/home/wyattgill";
       };

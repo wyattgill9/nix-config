@@ -3,10 +3,9 @@
   imports = [
     ./fish.nix
     ./foot.nix
-    ./vcs.nix
+    ./git.nix
     ./ghostty.nix
     ./helix
-    ./tmux.nix
     ./cli.nix
     ./tui.nix
   ];

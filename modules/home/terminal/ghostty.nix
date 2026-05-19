@@ -16,7 +16,7 @@
         "super+l=goto_split:right"
       ];
 
-      window-decoration = !pkgs.stdenv.isLinux;
+      window-decoration = true;
       gtk-titlebar = true;
       gtk-single-instance = true;
     };

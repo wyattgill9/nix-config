@@ -2,10 +2,8 @@
   email,
   fullName,
   homeDirectory,
-  hostName,
   inputs,
   pkgs,
-  system,
   username,
   ...
 }:
@@ -31,9 +29,7 @@
         email
         fullName
         homeDirectory
-        hostName
         inputs
-        system
         username
         ;
     };

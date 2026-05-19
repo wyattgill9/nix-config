@@ -3,6 +3,7 @@ _: {
     enable = true;
     package = null;
     portalPackage = null;
+    configType = "hyprlang";
     extraConfig = ''
       $fileManager = thunar
       $mainMod     = SUPER

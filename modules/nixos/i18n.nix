@@ -27,7 +27,5 @@
       pkgs.nerd-fonts._0xproto
       pkgs.noto-fonts
     ];
-
-    fontconfig.enable = true;
   };
 }

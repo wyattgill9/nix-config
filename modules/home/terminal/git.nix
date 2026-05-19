@@ -8,8 +8,5 @@
         inherit email;
       };
     };
-    signing = {
-      format = null;
-    };
   };
 }

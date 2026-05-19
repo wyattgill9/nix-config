@@ -13,8 +13,4 @@
     update.auto.enable = false;
     uninstallUnmanaged = false;
   };
-
-  # services.flatpak.packages = [
-  #   "org.vinegarhq.Sober"
-  # ];
 }

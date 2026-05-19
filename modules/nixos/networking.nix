@@ -2,7 +2,6 @@
 {
   networking = {
     inherit hostName;
-    useNetworkd = false;
 
     networkmanager = {
       enable = true;

@@ -3,7 +3,6 @@ _: {
     enable = true;
     package = null;
     portalPackage = null;
-    settings = { };
     extraConfig = ''
       $fileManager = thunar
       $mainMod     = SUPER

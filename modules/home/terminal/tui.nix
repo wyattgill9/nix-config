@@ -28,5 +28,6 @@
     pkgs.neovim
     pkgs.lazygit
     pkgs.lazyjj
+    pkgs.yazi
   ];
 }

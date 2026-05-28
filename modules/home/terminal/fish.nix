@@ -34,6 +34,8 @@
       interactiveShellInit = ''
         set -g fish_greeting
         fish_config theme choose none
+
+        set -gx EDITOR hx
       '';
 
       shellAliases = {

@@ -33,5 +33,7 @@
     pkgs.vlc
 
     pkgs.lunar-client
+
+    pkgs.foot
   ];
 }

@@ -14,9 +14,12 @@
     pkgs.bun
     pkgs.nodejs
 
-    pkgs.just
-    pkgs.ripgrep
     pkgs.fzf
+    pkgs.ripgrep
+    pkgs.fd
+    pkgs.yq
+    pkgs.ast-grep
+    pkgs.just
 
     pkgs.zip
 

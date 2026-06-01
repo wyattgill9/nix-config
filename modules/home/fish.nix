@@ -47,10 +47,5 @@
         vim = "nvim";
       };
     };
-
-    zoxide = {
-      enable = true;
-      enableFishIntegration = true;
-    };
   };
 }

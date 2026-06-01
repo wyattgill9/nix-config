@@ -1,5 +1,10 @@
 { pkgs, ... }:
 {
+  zoxide = {
+    enable = true;
+    enableFishIntegration = true;
+  };
+
   programs.nh = {
     enable = true;
     clean.enable = true;

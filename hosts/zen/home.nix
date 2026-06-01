@@ -5,8 +5,7 @@
 }:
 {
   imports = [
-    ../../modules/home/desktop
-    ../../modules/home/terminal
+    ../../modules/home
   ];
 
   home = {

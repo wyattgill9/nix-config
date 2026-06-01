@@ -72,7 +72,6 @@
         default = pkgs.mkShellNoCC {
           packages = [
             pkgs.nixd
-            pkgs.nixfmt
             pkgs.statix
             pkgs.deadnix
           ];

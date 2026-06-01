@@ -3,6 +3,7 @@
   fullName,
   homeDirectory,
   inputs,
+  nixpkgsConfig,
   pkgs,
   username,
   ...
@@ -17,9 +18,7 @@
     inputs.nix-flatpak.nixosModules.nix-flatpak
   ];
 
-  nixpkgs = {
-    config.allowUnfree = true;
-  };
+  nixpkgs.config = nixpkgsConfig;
 
   home-manager = {
     useGlobalPkgs = true;

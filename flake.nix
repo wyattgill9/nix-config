@@ -51,13 +51,17 @@
         homeDirectory = "/home/wyattgill";
       };
 
+      nixpkgsConfig = {
+        allowUnfree = true;
+      };
+
       zenPkgs = import nixpkgs {
         inherit (zen) system;
-        config.allowUnfree = true;
+        config = nixpkgsConfig;
       };
 
       zenArgs = {
-        inherit inputs;
+        inherit inputs nixpkgsConfig;
       }
       // zen;
     in

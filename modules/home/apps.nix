@@ -31,6 +31,7 @@
     pkgs.thunar
     pkgs.thunderbird
     pkgs.vlc
+    pkgs.easyeffects
 
     pkgs.lunar-client
 

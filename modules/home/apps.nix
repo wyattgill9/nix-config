@@ -27,7 +27,6 @@
     pkgs.element-desktop
     pkgs.zoom-us
     pkgs.slack
-    inputs.linear-linux.packages.${pkgs.stdenv.hostPlatform.system}.default
 
     pkgs.spotify
     pkgs.obsidian

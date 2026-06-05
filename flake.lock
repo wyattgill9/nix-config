@@ -142,26 +142,6 @@
         "type": "github"
       }
     },
-    "linear-linux": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1775350561,
-        "narHash": "sha256-hXK+tVJf2s6Areb/I/MqM3jARgfjafOyhs9eJGV/StQ=",
-        "owner": "selimaj-dev",
-        "repo": "linear-linux",
-        "rev": "fcd994c9f73aa9daddb6ee9e88fd4975cc297d7f",
-        "type": "github"
-      },
-      "original": {
-        "owner": "selimaj-dev",
-        "repo": "linear-linux",
-        "type": "github"
-      }
-    },
     "llm-agents": {
       "inputs": {
         "blueprint": "blueprint",
@@ -223,7 +203,6 @@
         "awww": "awww",
         "disko": "disko",
         "home-manager": "home-manager",
-        "linear-linux": "linear-linux",
         "llm-agents": "llm-agents",
         "nix-flatpak": "nix-flatpak",
         "nixpkgs": "nixpkgs",

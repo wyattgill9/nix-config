@@ -22,8 +22,8 @@ _: {
       substituters = [
         "https://cache.nixos.org/"
         "https://cache.numtide.com"
-        "https://wyattgill9.cachix.org"
-        "https://cache.iog.io"
+        # "https://wyattgill9.cachix.org"
+        # "https://cache.iog.io"
       ];
 
       trusted-public-keys = [

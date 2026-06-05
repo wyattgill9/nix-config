@@ -10,6 +10,11 @@ _: {
 
       set -g status-style "fg=white,bg=black"
       set-option -g status-position top
+
+      bind -n M-h select-pane -L
+      bind -n M-j select-pane -D
+      bind -n M-k select-pane -U
+      bind -n M-l select-pane -R
     '';
   };
 }

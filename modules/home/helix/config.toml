@@ -21,6 +21,7 @@ hidden = false
 enable = true
 
 [keys.normal]
+C-w = ":sh tmux split-window -h -c '#{pane_current_path}'"
 C-g = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw", ":reload-all"]
 C-y = [
   ':sh rm -f /tmp/unique-file',

@@ -21,6 +21,12 @@ indent = { tab-width = 4, unit = "    " }
 language-servers = ["lean"]
 rulers = []
 
+# # Route Helix's lean LSP through the lean-helix-view proxy
+# # https://github.com/wyattgill9/lean-helix-view
+# [language-server.lean]
+# command = "lean-helix-view"
+# args = ["proxy", "--", "lake", "serve"]
+
 [[language]]
 name = "haskell"
 file-types = [ "hs" ]

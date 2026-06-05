@@ -25,16 +25,17 @@
 
     pkgs.discord
     pkgs.element-desktop
+    pkgs.zoom-us
+    pkgs.slack
+    pkgs.linear
     pkgs.spotify
     pkgs.obsidian
-    pkgs.zoom-us
     pkgs.thunar
     pkgs.thunderbird
-    pkgs.vlc
     pkgs.easyeffects
+    pkgs.vlc
+    pkgs.foot
 
     pkgs.lunar-client
-
-    pkgs.foot
   ];
 }

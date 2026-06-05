@@ -1,9 +1,9 @@
 {
   programs = {
     direnv = {
-      enable = true;
-      enableFishIntegration = true;
+      enable = false;
       nix-direnv.enable = true;
+      enableFishIntegration = true;
       silent = true;
     };
 

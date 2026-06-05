@@ -29,5 +29,6 @@
     pkgs.zip
 
     pkgs.fastfetch
+    pkgs.nushell
   ];
 }

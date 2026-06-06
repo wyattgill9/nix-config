@@ -26,6 +26,7 @@
     pkgs.yq
     pkgs.ast-grep
     pkgs.just
+    pkgs.gh
 
     pkgs.zip
 

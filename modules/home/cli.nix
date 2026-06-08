@@ -32,5 +32,7 @@
 
     pkgs.fastfetch
     pkgs.nushell
+
+    pkgs.ferium
   ];
 }

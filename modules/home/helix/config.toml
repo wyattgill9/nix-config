@@ -21,9 +21,8 @@ hidden = false
 enable = true
 
 [keys.normal]
-C-w = ":sh tmux split-window -h -c '#{pane_current_path}'"
 C-g = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw", ":reload-all"]
-C-y = [
+C-w = [
   ':sh rm -f /tmp/unique-file',
   ':insert-output yazi "%{buffer_name}" --chooser-file=/tmp/unique-file',
   ':sh printf "\x1b[?1049h\x1b[?2004h" > /dev/tty',

@@ -22,17 +22,16 @@
     pkgs.fzf
     pkgs.ripgrep
     pkgs.fd
-    pkgs.jaq pkgs.jq
-    pkgs.yq
+    pkgs.jaq pkgs.jq pkgs.yq
     pkgs.ast-grep
     pkgs.just
+
     pkgs.gh
+    pkgs.graphite-cli
 
     pkgs.zip
 
     pkgs.fastfetch
     pkgs.nushell
-
-    pkgs.ferium
   ];
 }

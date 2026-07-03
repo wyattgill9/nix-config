@@ -32,6 +32,10 @@
       url = "github:indexable-inc/ix-cli";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    waycast = {
+      url = "git+https://gitgud.boo/javif89/waycast";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {

@@ -7,7 +7,7 @@ _: {
     extraConfig = ''
       $fileManager = thunar
       $mainMod     = SUPER
-      $menu        = rofi --show drun
+      $menu        = waycast
       $terminal    = ghostty
 
       monitor = DP-3, 1920x1080@240, 1080x0, 1
@@ -30,7 +30,7 @@ _: {
       workspace = 5, monitor:DP-3
       workspace = 6, monitor:DP-3
 
-      bind = $mainMod SHIFT, Z, exec, rofi -show drun -theme ~/.config/rofi/config.rasi
+      bind = $mainMod SHIFT, Z, exec, $menu
       bind = $mainMod, Q, exec, $terminal
       bind = $mainMod, E, exec, $fileManager
       bind = $mainMod, C, killactive
@@ -115,6 +115,8 @@ _: {
           animation = workspacesIn, 1, 1.21, almostLinear, fade
           animation = workspacesOut, 1, 1.94, almostLinear, fade
       }
+
+      layerrule = no_anim on, match:namespace Waycast
 
       windowrule = suppress_event maximize, match:class .*
       windowrule = no_focus on, match:class ^$, match:title ^$, match:xwayland true, match:float true, match:fullscreen false, match:pin false

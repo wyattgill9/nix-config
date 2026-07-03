@@ -227,6 +227,7 @@
         "llm-agents": "llm-agents",
         "nix-flatpak": "nix-flatpak",
         "nixpkgs": "nixpkgs",
+        "waycast": "waycast",
         "zen-browser": "zen-browser"
       }
     },
@@ -243,6 +244,27 @@
         "owner": "oxalica",
         "repo": "rust-overlay",
         "rev": "ab3536fe850211a96673c6ffb2cb88aab8071cc9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "type": "github"
+      }
+    },
+    "rust-overlay_2": {
+      "inputs": {
+        "nixpkgs": [
+          "waycast",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1782962170,
+        "narHash": "sha256-HsaK9yDDypMB2TPxAYz0mPKtmYhgNwFQa72b3Ko6kRE=",
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "rev": "e3fa5cf86b93914b8f312b2a1ca14fbb139c655c",
         "type": "github"
       },
       "original": {
@@ -285,6 +307,27 @@
         "owner": "numtide",
         "repo": "treefmt-nix",
         "type": "github"
+      }
+    },
+    "waycast": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "rust-overlay": "rust-overlay_2"
+      },
+      "locked": {
+        "lastModified": 1783049936,
+        "narHash": "sha256-YcryKuEPbcnhAxydT4SSDWoANSQ3hNy3oIE76J1Vxy4=",
+        "ref": "refs/heads/master",
+        "rev": "5274e83ce7f51dd8066dd993c5a6142d665d57bc",
+        "revCount": 189,
+        "type": "git",
+        "url": "https://gitgud.boo/javif89/waycast"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://gitgud.boo/javif89/waycast"
       }
     },
     "zen-browser": {

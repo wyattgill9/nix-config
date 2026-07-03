@@ -27,7 +27,6 @@
     pkgs.fzf
     pkgs.ripgrep
     pkgs.fd
-    pkgs.jaq
     pkgs.jq
     pkgs.yq
     pkgs.ast-grep

@@ -22,14 +22,10 @@ _: {
       substituters = [
         "https://cache.nixos.org/"
         "https://cache.numtide.com"
-        # "https://wyattgill9.cachix.org"
-        # "https://cache.iog.io"
       ];
 
       trusted-public-keys = [
         "niks3.numtide.com-1:DTx8wZduET09hRmMtKdQDxNNthLQETkc/yaX7M4qK0g="
-        # "wyattgill9.cachix.org-1:o7wwgwm7n42DP4ps1GIAkVuxmYDxGZeHl1XMSs2sITU="
-        "hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ="
       ];
 
       trusted-users = [

@@ -1,8 +1,4 @@
-{
-  pkgs,
-  lib,
-  ...
-}: {
+{pkgs, ...}: {
   programs.helix.enable = true;
 
   home = {
@@ -14,11 +10,5 @@
       source = ./.;
       recursive = true;
     };
-
-    activation.buildHelixGrammars = lib.hm.dag.entryAfter ["writeBoundary"] ''
-      export PATH=${pkgs.git}/bin:${pkgs.stdenv.cc}/bin:$PATH
-      ${pkgs.helix}/bin/hx --grammar fetch
-      ${pkgs.helix}/bin/hx --grammar build
-    '';
   };
 }

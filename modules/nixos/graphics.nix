@@ -5,7 +5,6 @@
       extraPackages = [
         pkgs.libvdpau-va-gl
         pkgs.libva-vdpau-driver
-        pkgs.mesa
         pkgs.mesa.opencl
       ];
     };

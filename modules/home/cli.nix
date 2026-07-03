@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
   programs.zoxide = {
     enable = true;
@@ -16,6 +16,8 @@
   };
 
   home.packages = [
+    inputs.ix-cli.packages.${pkgs.system}.default
+
     pkgs.bun
     pkgs.nodejs
 

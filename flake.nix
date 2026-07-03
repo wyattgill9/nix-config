@@ -28,6 +28,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };
+    ix-cli = {
+      url = "github:indexable-inc/ix-cli"; 
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =

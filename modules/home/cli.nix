@@ -19,7 +19,7 @@
   };
 
   home.packages = [
-    inputs.ix-cli.packages.${pkgs.system}.default
+    inputs.ix-cli.packages.${pkgs.stdenv.hostPlatform.system}.default
 
     pkgs.bun
     pkgs.nodejs

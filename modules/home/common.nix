@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   home.packages = [
     pkgs.adwaita-icon-theme
     pkgs.libnotify

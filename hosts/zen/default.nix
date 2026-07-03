@@ -7,8 +7,7 @@
   pkgs,
   username,
   ...
-}:
-{
+}: {
   imports = [
     ./disko.nix
     ./hardware.nix

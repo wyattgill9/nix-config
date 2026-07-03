@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   environment.systemPackages = [
     pkgs.bind
     pkgs.curl

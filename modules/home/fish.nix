@@ -28,7 +28,6 @@
           echo -n 'λ '
           set_color normal
         '';
-
       };
 
       interactiveShellInit = ''

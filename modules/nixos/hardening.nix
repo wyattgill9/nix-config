@@ -1,5 +1,4 @@
-{ username, ... }:
-{
+{username, ...}: {
   boot.kernel.sysctl = {
     "kernel.dmesg_restrict" = 1;
     "kernel.kptr_restrict" = 2;
@@ -30,7 +29,7 @@
       enable = true;
       openFirewall = false;
       settings = {
-        AllowUsers = [ username ];
+        AllowUsers = [username];
         KbdInteractiveAuthentication = false;
         PasswordAuthentication = false;
         PermitRootLogin = "no";

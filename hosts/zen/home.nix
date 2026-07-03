@@ -2,8 +2,7 @@
   homeDirectory,
   username,
   ...
-}:
-{
+}: {
   imports = [
     ../../modules/home
   ];

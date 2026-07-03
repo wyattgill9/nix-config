@@ -1,5 +1,8 @@
-{ pkgs, inputs, ... }:
 {
+  pkgs,
+  inputs,
+  ...
+}: {
   programs.zoxide = {
     enable = true;
     enableFishIntegration = true;
@@ -24,7 +27,9 @@
     pkgs.fzf
     pkgs.ripgrep
     pkgs.fd
-    pkgs.jaq pkgs.jq pkgs.yq
+    pkgs.jaq
+    pkgs.jq
+    pkgs.yq
     pkgs.ast-grep
     pkgs.just
 

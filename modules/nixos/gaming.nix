@@ -20,4 +20,8 @@
       ];
     };
   };
+
+  environment.systemPackages = [
+    pkgs.dualsensectl
+  ];
 }

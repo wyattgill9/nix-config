@@ -22,7 +22,6 @@
     pkgs.google-chrome
     pkgs.firefox
 
-    # pkgs.discord
     pkgs.discord-canary
     pkgs.element-desktop
     pkgs.zoom-us

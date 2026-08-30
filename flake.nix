@@ -33,7 +33,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     waycast = {
-      url = "git+https://gitgud.boo/javif89/waycast";
+      # ponytail: pinned — waycast@1.2.0 requires rustc 1.96, nixpkgs still ships 1.94. Drop the ?rev= to unpin once nixpkgs has rustc >= 1.96.
+      url = "git+https://gitgud.boo/javif89/waycast?rev=5274e83ce7f51dd8066dd993c5a6142d665d57bc";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };

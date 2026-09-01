@@ -10,7 +10,6 @@ _: {
       $menu        = waycast
       $terminal    = ghostty
 
-      monitor = HDMI-A-1, 3840x2160@60, 0x0, 1.5, transform, 1
       monitor = DP-3, 1920x1080@240, 1440x740, 1
 
       env = XCURSOR_THEME,Adwaita

@@ -30,5 +30,8 @@ _: {
 
   environment.sessionVariables = {
     WLR_NO_HARDWARE_CURSORS = "1";
+    # TZDIR reaches graphical sessions here; the tzdata module only
+    # sets it via environment.variables, which Hyprland/Steam never source.
+    TZDIR = "/etc/zoneinfo";
   };
 }

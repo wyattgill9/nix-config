@@ -36,11 +36,13 @@
       url = "github:crmne/spotifast";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    waycast = {
-      # ponytail: pinned — waycast@1.2.0 requires rustc 1.96, nixpkgs still ships 1.94. Drop the ?rev= to unpin once nixpkgs has rustc >= 1.96.
-      url = "git+https://gitgud.boo/javif89/waycast?rev=5274e83ce7f51dd8066dd993c5a6142d665d57bc";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # ponytail: disabled, rofi used instead. waycast's own flake hardcodes
+    # rust-bin.stable."1.94.0" while its Cargo.toml now requires 1.96, so it cannot
+    # build at any recent rev. Re-enable once upstream bumps that toolchain.
+    # waycast = {
+    #   url = "git+https://gitgud.boo/javif89/waycast";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
   };
 
   outputs = {

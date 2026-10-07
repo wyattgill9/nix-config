@@ -37,5 +37,6 @@
     pkgs.foot
 
     pkgs.lunar-client
+    pkgs.osu-lazer
   ];
 }

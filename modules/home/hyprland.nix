@@ -7,7 +7,7 @@ _: {
     extraConfig = ''
       $fileManager = thunar
       $mainMod     = SUPER
-      $menu        = waycast
+      $menu        = rofi -show drun -theme ~/.config/rofi/config.rasi
       $terminal    = ghostty
 
       monitor = DP-3, 1920x1080@240, 1440x740, 1
@@ -75,6 +75,7 @@ _: {
       input {
           follow_mouse = 1
           sensitivity = 0
+          accel_profile = flat
           touchpad {
               natural_scroll = false
           }

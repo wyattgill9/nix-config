@@ -28,15 +28,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };
-    ix-cli = {
-      url = "github:indexable-inc/ix-cli";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    spotifast = {
-      url = "github:crmne/spotifast";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    # ponytail: disabled, rofi used instead. waycast's own flake hardcodes
     # rust-bin.stable."1.94.0" while its Cargo.toml now requires 1.96, so it cannot
     # build at any recent rev. Re-enable once upstream bumps that toolchain.
     # waycast = {

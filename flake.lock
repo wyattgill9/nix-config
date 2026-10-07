@@ -201,6 +201,7 @@
         "llm-agents": "llm-agents",
         "nix-flatpak": "nix-flatpak",
         "nixpkgs": "nixpkgs",
+        "spotifast": "spotifast",
         "waycast": "waycast",
         "zen-browser": "zen-browser"
       }
@@ -229,6 +230,27 @@
     "rust-overlay_2": {
       "inputs": {
         "nixpkgs": [
+          "spotifast",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1787834454,
+        "narHash": "sha256-jXSvqn04IOecJCvSvl8+g3PsbDVNP6qKs6dKUs/b16k=",
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "rev": "dc2fd1acc537f3583744e1373597a5731ff7a6e3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "type": "github"
+      }
+    },
+    "rust-overlay_3": {
+      "inputs": {
+        "nixpkgs": [
           "waycast",
           "nixpkgs"
         ]
@@ -244,6 +266,27 @@
       "original": {
         "owner": "oxalica",
         "repo": "rust-overlay",
+        "type": "github"
+      }
+    },
+    "spotifast": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "rust-overlay": "rust-overlay_2"
+      },
+      "locked": {
+        "lastModified": 1791315600,
+        "narHash": "sha256-7H/5DgK4kt7kXA+I4+1qESU+pPs2wnAbbW9FMyCNTK4=",
+        "owner": "crmne",
+        "repo": "spotifast",
+        "rev": "995c768dcba4da7f93302bf2107af6b7ec3df02b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "crmne",
+        "repo": "spotifast",
         "type": "github"
       }
     },
@@ -288,7 +331,7 @@
         "nixpkgs": [
           "nixpkgs"
         ],
-        "rust-overlay": "rust-overlay_2"
+        "rust-overlay": "rust-overlay_3"
       },
       "locked": {
         "lastModified": 1783049936,

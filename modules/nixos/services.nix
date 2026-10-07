@@ -6,6 +6,10 @@ _: {
 
     displayManager.ly.enable = true;
 
+    # Secret Service, where spotifast keeps its Spotify grants. The module wires
+    # pam.services.login, which ly substacks, so it unlocks with the login password.
+    gnome.gnome-keyring.enable = true;
+
     keyd = {
       enable = true;
       keyboards.default = {

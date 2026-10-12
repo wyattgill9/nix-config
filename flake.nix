@@ -38,7 +38,6 @@
 
   outputs = {
     nixpkgs,
-    home-manager,
     ...
   } @ inputs: let
     inherit (nixpkgs) lib;
@@ -57,11 +56,6 @@
 
     nixpkgsConfig = {
       allowUnfree = true;
-    };
-
-    zenPkgs = import nixpkgs {
-      inherit (zen) system;
-      config = nixpkgsConfig;
     };
 
     zenArgs =
@@ -88,16 +82,6 @@
       modules = [
         ./hosts/zen/default.nix
       ];
-    };
-
-    homeConfigurations = {
-      "${zen.username}@${zen.hostName}" = home-manager.lib.homeManagerConfiguration {
-        pkgs = zenPkgs;
-        extraSpecialArgs = zenArgs;
-        modules = [
-          ./hosts/zen/home.nix
-        ];
-      };
     };
   };
 }

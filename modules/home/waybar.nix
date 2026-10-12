@@ -46,7 +46,7 @@ _: {
           };
           sort-by-number = true;
           persistent-workspaces = {
-            "DP-3" = 6;
+            "DP-1" = 6;
           };
         };
         clock = {

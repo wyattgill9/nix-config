@@ -28,7 +28,6 @@
     pkgs.slack
 
     pkgs.spotify
-    inputs.spotifast.packages.${pkgs.stdenv.hostPlatform.system}.default
     pkgs.obsidian
     pkgs.thunar
     pkgs.thunderbird

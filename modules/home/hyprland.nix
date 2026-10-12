@@ -10,7 +10,7 @@ _: {
       $menu        = rofi -show drun -theme ~/.config/rofi/config.rasi
       $terminal    = ghostty
 
-      monitor = DP-3, 1920x1080@240, 1440x740, 1
+      monitor = desc:ASUSTek COMPUTER INC VG279QM R8LMQS123686, 1920x1080@240, 1440x740, 1
 
       env = XCURSOR_THEME,Adwaita
       env = XCURSOR_SIZE,32
@@ -23,12 +23,12 @@ _: {
       exec-once = fcitx5 -d
       exec-once = lxqt-policykit-agent
 
-      workspace = 1, monitor:DP-3
-      workspace = 2, monitor:DP-3
-      workspace = 3, monitor:DP-3
-      workspace = 4, monitor:DP-3
-      workspace = 5, monitor:DP-3
-      workspace = 6, monitor:DP-3
+      workspace = 1, monitor:desc:ASUSTek COMPUTER INC VG279QM R8LMQS123686
+      workspace = 2, monitor:desc:ASUSTek COMPUTER INC VG279QM R8LMQS123686
+      workspace = 3, monitor:desc:ASUSTek COMPUTER INC VG279QM R8LMQS123686
+      workspace = 4, monitor:desc:ASUSTek COMPUTER INC VG279QM R8LMQS123686
+      workspace = 5, monitor:desc:ASUSTek COMPUTER INC VG279QM R8LMQS123686
+      workspace = 6, monitor:desc:ASUSTek COMPUTER INC VG279QM R8LMQS123686
       workspace = 7, monitor:HDMI-A-1, default:true
 
       bind = $mainMod SHIFT, Z, exec, $menu

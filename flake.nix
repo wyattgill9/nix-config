@@ -36,10 +36,7 @@
     # };
   };
 
-  outputs = {
-    nixpkgs,
-    ...
-  } @ inputs: let
+  outputs = {nixpkgs, ...} @ inputs: let
     inherit (nixpkgs) lib;
 
     systems = ["x86_64-linux"];
